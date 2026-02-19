@@ -17,15 +17,10 @@
 
 
 | ID | THEME | Description
-
 |--- | ---          |---
-
-|01  | Emmet        |Work Flow - Markup \& Styling           |
-
+|01  | Emmet        |Work Flow - Markup & Styling           |
 |02  | Html         |Structure - Hipertext Markup Language  | 
-
-|03  | Css          |Look \& Fell - Cascading Style Sheets   |
-
+|03  | Css          |Look & Fell - Cascading Style Sheets   |
 |04  | Javascript   |Behavior - Programing Language         |
 
 
