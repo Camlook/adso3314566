@@ -32,7 +32,7 @@
 
 
 
-!\[Cmilook](caricatura_IA.png)
+!\[Cmilook](./caricatura_IA.png)
 
 
 
