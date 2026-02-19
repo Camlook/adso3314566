@@ -1,20 +1,18 @@
-\# ADSO3314566
+# ADSO3314566
 
 
 
 ---
 
-&nbsp;      
-
-\## Analisis y Desarrollo de Software
+## Analisis y Desarrollo de Software
 
 
 
-\### Centro de procesos industriales y Construccion      
+### Centro de procesos industriales y Construccion      
 
 
 
-\*Regional Caldas\*
+**Regional Caldas**
 
 
 
@@ -32,13 +30,13 @@
 
 
 
-!\[Cmilook](https://adso3314566-orpin.vercel.app/caricatura_IA.png)
+![Cmilook](https://adso3314566-orpin.vercel.app/caricatura_IA.png)
 
 
 
-\[ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
+[ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
 
 
 
-\[VERCEL URL](https://adso3314566-orpin.vercel.app/).
+[VERCEL URL](https://adso3314566-orpin.vercel.app/).
 

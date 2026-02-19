@@ -1,101 +1,124 @@
-<!-- ul>li>a -->
-<ul>
-    <li><a href=""></a></li>
-</ul>
-
-<!-- section+header+nav -->
-<section></section>
-<header></header>
-<nav></nav>
-
-<!-- ul>li*3 -->
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
-
-<!-- div.container y .container2 -->
-<div class="container"></div>
-<div class="container2"></div>
-
-<!-- div.clasea.claseb.clasec -->
-<div class="clase1 clase2 clasen"></div>
-
-<!-- nav#menu -->
-<nav id="menu"></nav>
-
-<!-- div{Hola} y a{Clickea Aquí} -->
-<div>Hola</div>
-<a href="">Clickea Aquí</a>
-
-<!-- a[href=www.steam.com]-->
-<a href="www.steam.com"></a>
-
-<!-- ul>li.a$*5 y section>article.sec$$*2-->
-<ul>
-    <li class="a1"></li>
-    <li class="a2"></li>
-    <li class="a3"></li>
-    <li class="a4"></li>
-    <li class="a5"></li>
-</ul>
-
-<section>
-    <article class="sec01"></article>
-    <article class="sec02"></article>
-</section>
-
-<!-- ul>li.a$@-*3 -->
-<ul>
-    <li class="a3"></li>
-    <li class="a2"></li>
-    <li class="a1"></li>
-</ul>
-
-<!-- ul>li.a$@2*3 -->
-<ul>
-    <li class="a2"></li>
-    <li class="a3"></li>
-    <li class="a4"></li>
-</ul>
-
-<!-- section>article>div^p -->
-<section>
-    <article>
-        <div></div>
-    </article>
-    <p></p>
-</section>
-
-<!-- (header>nav)(section>article) -->
-(header>nav)(section>article)
-
-<!-- lorem lorem20 y lorem*5 -->
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam possimus corporis tempora velit expedita nobis veniam, quidem ullam eveniet error, temporibus optio. Aut tempora necessitatibus illo numquam repudiandae earum odit.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam reprehenderit unde dolor maiores, labore ex autem corrupti similique sit incidunt.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste porro fugiat perferendis incidunt ex quas similique officiis ipsam qui, iusto aut sit doloribus, temporibus, accusantium doloremque? Fugit eos error magni.
-Expedita amet excepturi sint temporibus? Quaerat enim expedita debitis cumque pariatur facilis temporibus blanditiis sit, ut rem culpa vel. Expedita, accusamus dolores porro animi fugiat sit provident repellendus possimus eius!
-Modi, sed dolorem. Aut quis corporis, fuga et temporibus eum eaque corrupti quasi doloremque expedita veniam totam consectetur modi ab, delectus laborum. Dignissimos dicta eum nihil voluptates ut obcaecati sed.
-Doloribus voluptatum sit quae sed sapiente rerum quia ducimus. Illo doloremque saepe velit architecto labore minus eius aliquid, minima id praesentium beatae rem alias porro error sunt, quae quam laborum.
-Ea aut fugit unde quisquam ut, veniam quis explicabo sunt enim tempore minus quaerat earum possimus quidem animi fugiat alias. Odit sit facilis aliquid, cum nisi impedit nesciunt voluptatibus vel.
-
-<!-- html:xs html:xt html:4s html:4t html:5 -->
-<html:xs></html:xs>
-<html:xt></html:xt>
-<html:4s></html:4s>
-<html:4t></html:4t>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emmet</title>
 </head>
-<body>
-    
-</body>
-</html>
 
-<!-- meta:vp -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+        background-color: #002800;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23003801' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23004702' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23005703' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23006604' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23007605' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .btn-home {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .6;
+        transition: all 0.4s ease-in;
+    }
+
+    .btn-home:hover {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+</style>
+
+<body>
+
+    <a href="../index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 256 256">
+            <path
+                d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z">
+            </path>
+        </svg>
+    </a>
+
+    <main>
+        <h1>01- Emmet</h1>
+        <h4>Work Flow - Stylling</h4>
+        <img src="/emmet.svg" alt="Emmet" width="240">
+        <section>
+            <h2>Nesting ></h2>
+            <h4>Example</h4>
+            <p>ul>li>a ↔️</p>
+            <h4>Result</h4>
+<xmp>
+<ul>
+    <li><a href=""></a></li>
+</ul>
+</xmp>
+        </section>
+<br><br>
+        <section>
+            <h2>Sibling ></h2>
+            <h4>Example</h4>
+            <p>section+header+nav ↔️</p>
+            <h4>Result</h4>
+<xmp>
+<section></section>
+<header></header>
+<nav></nav>
+</xmp>
+        </section>
+<br><br>
+        <section>
+            <h2>Repeat ></h2>
+            <h4>Example</h4>
+            <p>ul>li*3 ↔️</p>
+            <h4>Result</h4>
+<xmp>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</xmp>
+        </section>
+<br><br>
+        <section>
+            <h2>Class ></h2>
+            <h4>Example</h4>
+            <p>div.contenedor ↔️<br>
+                .contenedor2 ↔️
+            </p>
+            <h4>Result</h4>
+<xmp>
+<div class="contenedor"></div>
+</xmp>
+        </section>
+<br><br>
+        <section>
+            <h2>Multiple Classes ></h2>
+            <h4>Example</h4>
+            <p>div.clase1.clase2.clasen ↔️
+            </p>
+            <h4>Result</h4>
+<xmp>
+<div class="clase1 clase2 clasen"></div>
+</xmp>
+        </section>
+<br><br>
+    </main>
+</body>
+
+</html>
