@@ -32,7 +32,7 @@
 
 
 
-!\[Cmilook](https://adso3314566-orpin.vercel.app/caricatura%20IA.png)
+!\[Cmilook](caricatura_IA.png)
 
 
 
