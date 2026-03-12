@@ -25,7 +25,7 @@
 
 
 
-![Cmilook](https://adso3314566-orpin.vercel.app/caricatura_IA.png)
+![Cmilook](https://adso3314566-orpin.vercel.app/imgs/caricatura_IA.png)
 
 
 
