@@ -38,7 +38,7 @@ body {
         }
 
         h4 {
-            color: rgb(255, 255, 255);
+            color: #fff9;
             font-family: "Roboto Slab", cursive;
             text-align: center;
             font-size: 1.2rem;
@@ -93,10 +93,13 @@ body {
         gap:0.6rem;
         width:100%;
         align-items: left;
+        max-width: 300px;
+        margin: auto;
+        transform: translateX(-10px);
         a:link,
         a:visited {
-            background-color: rgb(224, 69, 22);
-            color: rgb(224, 69, 22);
+            background-color: #74747421;
+            color: #74747421;
             border-radius: 10rem;
             padding: 0.4rem;
             display: flex;
@@ -108,13 +111,13 @@ body {
                 font-family: "Roboto Slab", serif;
                 background-color: rgb(224, 69, 22);
                 color: rgb(255, 255, 255);
-                border-radius: 50%;
+                border-radius: 70%;
                 font-size: 2rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 80px;
-                width: 80px;
+                height: 70px;
+                width: 70px;
             }
 
             h4 {
@@ -140,6 +143,18 @@ body {
         }
 
     }
+}
+
+menu a span {
+    min-width: 70px;
+}
+
+menu a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .btn-home {

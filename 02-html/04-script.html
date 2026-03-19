@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-Title</title>
+    <title>04-Script</title>
     <link rel="stylesheet" href="../src/css/html.css">
 </head>
 <body>
@@ -15,12 +15,22 @@
     
     <main>
         <header>
-            <h1>00-Title</h1> <br>
-            <h2>Description</h2>
+            <h1>04-Script</h1> <br>
+            <h2>Inserts JavaScript code.</h2>
         </header>
     <section>
-        
+        <h3>JavaScript</h3>
+        <h4 class="user"></h4>
     </section>
     </main>
+    <script>
+        const user = document.querySelector(".user");
+        const answer = prompt("What's your name?");
+        if(answer) {
+            user.textContent = '😎 Welcome, '+ answer +'!';
+        } else {
+            user.textContent = '🫠 Welcome... Guest.';
+        }
+    </script>
 </body>
 </html>
