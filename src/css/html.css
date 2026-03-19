@@ -27,7 +27,7 @@ body {
         }
 
         img {
-            border: 6px solid rgb(250, 101, 32);
+            border: 6px solid #fa6529;
             border-radius: 50%;
             height: 250px;
             width: 250px;
@@ -44,6 +44,47 @@ body {
             font-size: 1.2rem;
         }
 
+        header{
+            h1 { 
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1rem;
+                color: #fff9;
+                font-family: "Roboto Slab", cursive;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+        }
+        section {
+            background-color: #74747421;
+            border-radius: 0.2rem;
+            min-width: 350px;
+            max-width: 700px;
+            margin-top: 2rem;
+            padding: 1rem;
+            color: black;
+            font-family: "Roboto Slab", cursive;
+            transition: all 0.4s ease-in;
+            h3 {
+                border-bottom: 2px solid #ffffff;
+                margin: 0;
+                color: white;
+            }
+            p {
+                color: #fff9;
+                font-family: "Roboto Slab", cursive;
+            }
+        }
+
+        transition: transform 0.4s ease-in;
+
+        section:hover {
+            transform: scale(1.01);
+            opacity: 1;
+            box-shadow: 0 6px 30px rgba(224, 69, 22);
+}
     }
 
     menu {
@@ -55,7 +96,7 @@ body {
         a:link,
         a:visited {
             background-color: rgb(224, 69, 22);
-            color: rgb(255, 255, 255);
+            color: rgb(224, 69, 22);
             border-radius: 10rem;
             padding: 0.4rem;
             display: flex;
@@ -86,8 +127,7 @@ body {
                 display: block;
                 font-size: 0.7rem;
                 text-indent: 0.2rem;
-                width: 225px;
-                align-items: ;
+                width: 225px; 
             }
 
             transition: transform 0.4s ease-in;
