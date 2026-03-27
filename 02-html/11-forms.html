@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>00-Title</title>
+    <link rel="stylesheet" href="../src/css/html.css" />
+  </head>
+  <body>
+    <a href="/02-html/index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#ffff"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"
+        ></path>
+      </svg>
+    </a>
+
+    <main>
+      <header>
+        <h1>11-Forms</h1>
+        <br />
+        <h2>Creates interactive forms for user input.</h2>
+      </header>
+      <section>
+        <h3 style="color: white; text-align: left">Form</h3>
+        <br>
+        <form style="color: white">
+          <label for="nombre">Name:</label>
+          <input type="text" id="nombre" name="nombre" />
+        </form>
+        <br><br>
+        <h3 style="color: white; text-align: left">Fieldset and Legend</h3>
+        <br>
+        <form>
+          <fieldset>
+            <legend style="color: white;">Basic Information</legend>
+            <input type="text" placeholder="Name" />
+          </fieldset>
+        </form>
+        <br><br>
+        <h3 style="color: white; text-align: left">Input and Label</h3>
+        <br>
+        <form>
+          <label style="color: white;" for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </form>
+        <br><br>
+        <h3 style="color: white; text-align: left">Textarea</h3>
+        <br>
+        <textarea name="mensaje" rows="4" cols="30"></textarea>
+        <br><br>
+        <h3 style="color: white; text-align: left">Select and Option</h3>
+        <br>
+        <select name="opciones" id="opciones">
+          <option value="opcion1">Option 1</option>
+          <option value="opcion2">Option 2</option>
+          <option value="opcion3">Option 3</option>
+        </select>
+      </section>
+    </main>
+  </body>
+</html>
