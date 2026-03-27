@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00-Title</title>
+    <link rel="stylesheet" href="../src/css/html.css">
+</head>
+<style>
+    body {
+        background-color: #121212;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    main {
+        max-width: 700px;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    section {
+        margin-top: 30px;
+    }
+
+    .video-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .videstilo {
+        border: 2px solid #444;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        max-width: 80%;
+    }
+</style>
+<body>
+    <a href="/02-html/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+        </path>
+    </svg>
+    </a>
+    
+    <main>
+        <header>
+            <h1>14-Video</h1> <br>
+            <h2>Inserts video files.</h2>
+        </header>
+    <section>
+        <h3>Video Player</h3>
+        <p>The &lt;video&gt; element allows you to embed video content in your HTML document.</p>
+
+        <div class="video-container">
+            <video class="videstilo" controls>
+                <source src="/src/video/video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    </main>
+</body>
+</html>
