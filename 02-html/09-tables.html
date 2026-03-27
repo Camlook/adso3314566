@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>00-Title</title>
     <link rel="stylesheet" href="../src/css/html.css">
+    <style>
+        .tabla-estilo {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .tabla-estilo th, .tabla-estilo td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .tabla-estilo th {
+            background-color: #ff7e27;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <a href="/02-html/index.html" class="btn-home">
@@ -12,7 +26,6 @@
         </path>
     </svg>
     </a>
-    
     <main>
         <header>
             <h1>09-Tables</h1> <br>
@@ -20,31 +33,33 @@
         </header>
     <section>
         <h3>Table Structure</h3>
-        <table style="color: #fff9;">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>City</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Camilo</td>
-                    <td>21</td>
-                    <td>Manizales</td>
-                </tr>
-                <tr>
-                    <td>Sinaí</td>
-                    <td>18</td>
-                    <td>CDMX</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">Total: 2</td>
-                </tr>
-            </tfoot>
+        <br>
+        <table class="tabla-estilo" style="color: white;">
+            <tr>
+                <th>Descripción</th>
+                <th>Mes</th>
+                <th>Costo</th>
+            </tr>
+            <tr>
+                <td>Agua</td>
+                <td>Enero</td>
+                <td>$ 3.000</td>
+            </tr>
+            <tr>
+                <td>Luz</td>
+                <td>Febrero</td>
+                <td>$ 5.500</td>
+            </tr>
+            <tr>
+                <td>Coche</td>
+                <td>Marzo</td>
+                <td>$ 10.100</td>
+            </tr>
+            <tr>
+                <td>Internet</td>
+                <td>Abril</td>
+                <td>$ 450</td>
+            </tr>
         </table>
     </section>
     </main>

@@ -1,68 +1,127 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>00-Title</title>
-    <link rel="stylesheet" href="../src/css/html.css" />
-  </head>
-  <body>
-    <a href="/02-html/index.html" class="btn-home">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        fill="#ffff"
-        viewBox="0 0 256 256"
-      >
-        <path
-          d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"
-        ></path>
-      </svg>
-    </a>
 
-    <main>
-      <header>
-        <h1>11-Forms</h1>
-        <br />
-        <h2>Creates interactive forms for user input.</h2>
-      </header>
-      <section>
-        <h3 style="color: white; text-align: left">Form</h3>
-        <br>
-        <form style="color: white">
-          <label for="nombre">Name:</label>
-          <input type="text" id="nombre" name="nombre" />
-        </form>
-        <br><br>
-        <h3 style="color: white; text-align: left">Fieldset and Legend</h3>
-        <br>
-        <form>
-          <fieldset>
-            <legend style="color: white;">Basic Information</legend>
-            <input type="text" placeholder="Name" />
-          </fieldset>
-        </form>
-        <br><br>
-        <h3 style="color: white; text-align: left">Input and Label</h3>
-        <br>
-        <form>
-          <label style="color: white;" for="email">Email:</label>
-          <input type="email" id="email" name="email" />
-        </form>
-        <br><br>
-        <h3 style="color: white; text-align: left">Textarea</h3>
-        <br>
-        <textarea name="mensaje" rows="4" cols="30"></textarea>
-        <br><br>
-        <h3 style="color: white; text-align: left">Select and Option</h3>
-        <br>
-        <select name="opciones" id="opciones">
-          <option value="opcion1">Option 1</option>
-          <option value="opcion2">Option 2</option>
-          <option value="opcion3">Option 3</option>
-        </select>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>00-Title</title>
+  <link rel="stylesheet" href="../src/css/html.css" />
+</head>
+<style>
+  body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+  }
+
+  main {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  header h1 {
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  header h2 {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  section h2 {
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #2a2a2a;
+    color: white;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #ff7e27;
+  }
+
+  fieldset {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  legend {
+    color: #5e5e5e;
+    padding: 0 5px;
+  }
+</style>
+
+<body>
+  <a href="/02-html/index.html" class="btn-home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+      <path
+        d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+      </path>
+    </svg>
+  </a>
+
+  <main>
+    <header>
+      <h1>11-Forms</h1>
+      <h2>Creates interactive forms for user input.</h2>
+    </header>
+    <section>
+
+      <h2>Form</h2>
+      <form>
+        <label style="color: #5e5e5e;" for="nombre">Name:</label>
+        <input type="text" id="nombre" name="nombre" />
+      </form>
+
+      <h2>Fieldset and Legend</h2>
+      <form>
+        <fieldset>
+          <legend>Basic Information</legend>
+          <input type="text" placeholder="Name" />
+        </fieldset>
+      </form>
+
+      <h2>Input and Label</h2>
+      <form>
+        <label style="color: #5e5e5e;" for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+      </form>
+
+      <h2>Textarea</h2>
+      <textarea name="mensaje" rows="4"></textarea>
+
+      <h2>Select and Option</h2>
+      <select style="color: #5e5e5e;" name="opciones">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+
+    </section>
+  </main>
+</body>
+
 </html>
