@@ -14,7 +14,7 @@
   }
 
   main {
-    max-width: 500px;
+    max-width: 800px;
     margin: 60px auto;
     padding: 30px;
     border-radius: 12px;
@@ -47,7 +47,8 @@
 
   input,
   textarea,
-  select {
+  select,
+  progress {
     padding: 8px;
     border-radius: 6px;
     border: none;
@@ -72,6 +73,35 @@
     color: #5e5e5e;
     padding: 0 5px;
   }
+
+  label {
+    color: #5e5e5e;
+  }
+
+  .inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  button {
+    background: #ff7e27;
+    color: white;
+    cursor: pointer;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+  }
 </style>
 
 <body>
@@ -88,37 +118,105 @@
       <h1>11-Forms</h1>
       <h2>Creates interactive forms for user input.</h2>
     </header>
+
     <section>
+      <h2>Complete Form</h2>
 
-      <h2>Form</h2>
       <form>
-        <label style="color: #5e5e5e;" for="nombre">Name:</label>
-        <input type="text" id="nombre" name="nombre" />
-      </form>
 
-      <h2>Fieldset and Legend</h2>
-      <form>
         <fieldset>
-          <legend>Basic Information</legend>
-          <input type="text" placeholder="Name" />
+          <legend>Text Inputs</legend>
+
+          <label>Name:</label>
+          <input type="text" name="name">
+          <br><br>
+          <label>Password:</label>
+          <input type="password" name="password">
+          <br><br>
+          <label>Email:</label>
+          <input type="email" name="email">
+          <br><br>
+          <label>Search:</label>
+          <input type="search" name="search">
         </fieldset>
+
+        <fieldset>
+          <legend>Numbers & Dates</legend>
+
+          <label>Number:</label>
+          <input type="number" name="number">
+          <br>
+          <label>Range:</label>
+          <input type="range" name="range">
+          <br>
+          <label>Date:</label>
+          <input type="date" name="date">
+          <br>
+          <label>Time:</label>
+          <input type="time" name="time">
+          <br>
+          <label>Week:</label>
+          <input type="week" name="week">
+          <br>
+          <label>Month:</label>
+          <input type="month" name="month">
+        </fieldset>
+
+        <fieldset>
+          <legend>Pickers</legend>
+
+          <label>Color:</label>
+          <input type="color" name="color">
+          <br>
+          <label>File:</label>
+          <input type="file" name="file">
+        </fieldset>
+        <fieldset>
+          <legend>Options</legend>
+
+          <div class="inline">
+            <input type="radio" name="gender" value="male">
+            <label>Male</label>
+          </div>
+          <div class="inline">
+            <input type="radio" name="gender" value="female">
+            <label>Female</label>
+          </div>
+
+          <div class="inline">
+            <input type="checkbox" name="terms">
+            <label>Accept terms</label>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Select & Textarea</legend>
+
+          <select name="options">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <br><br>
+          <textarea rows="4" placeholder="Write something..."></textarea>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Progress</legend>
+          <progress value="60" max="100"></progress>
+        </fieldset>
+
+        <fieldset>
+          <legend>Buttons</legend>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+
+        </fieldset>
+
       </form>
-
-      <h2>Input and Label</h2>
-      <form>
-        <label style="color: #5e5e5e;" for="email">Email:</label>
-        <input type="email" id="email" name="email" />
-      </form>
-
-      <h2>Textarea</h2>
-      <textarea name="mensaje" rows="4"></textarea>
-
-      <h2>Select and Option</h2>
-      <select style="color: #5e5e5e;" name="opciones">
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-      </select>
 
     </section>
   </main>
