@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-Title</title>
+    <title>04-Basic Selectors</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        /* Selector combinado */
+        div.rotate {
+            background: linear-gradient(rgb(73, 31, 128), rgb(28, 97, 246));
+            border-radius: 0.4rem;
+            color: rgb(0, 0, 0);
+            margin: auto;
+            padding: 1rem;
+            height: 4rem auto;
+            font-size: 3.6rem;
+            transform: rotate(10deg);
+        }
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -16,16 +29,18 @@
     <main>
         <header>
             <h1>04-Basic Selectors</h1> <br>
-            <h2>- Universal (*) <br>
-                - Type / Tag (p) <br>
-                - Descending (div p) <br>
-                - Class (.important) <br>
-                - ID (#cod389) <br>
-                - Merge (div#user3 p.title)
+            <h2> <li>Universal (*)</li> <br>
+                <li>Type / Tag (p)</li> <br>
+                <li>Descending (div p)</li> <br>
+                <li>Class (.important)</li> <br>
+                <li>ID (#cod389)</li> <br>
+                <li>Merge (div#user3 p.title)</li>
             </h2>
         </header>
     <section>
-        
+        <div class="rotate">
+            <h3>SENA</h3>
+        </div>
     </section>
     </main>
 </body>

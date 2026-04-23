@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>00-Title</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        section button {
+            border-radius: 0.4rem;
+            border: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 1.2rem;
+            display: flex;
+            margin: 4rem auto;
+        }
+
+        section button.green {
+            background: #5fbb5f;
+        }
+        
+        section .green {
+            background: #e44ea8;
+        }
+        section button.green:hover {
+            background: #4e9e4e;
+        }
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -19,7 +40,9 @@
             <h2>Is score/rank that determines which style declaration is ultimately applied to an element.</h2>
         </header>
     <section>
-        
+        <button class="green">
+            Press me
+        </button>
     </section>
     </main>
 </body>

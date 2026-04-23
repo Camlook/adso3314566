@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-Title</title>
+    <title>05-Advanced Selectors</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        ul > li {
+            color: white;
+        }
+        ul > li + li {
+            color: rgb(255, 0, 0);
+        }
+        ul > li + li + li {
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -23,7 +34,11 @@
             </h2>
         </header>
     <section>
-        
+        <ul class="fruits">
+            <li>Orange</li>
+            <li>Apple</li>
+            <li>Lemon</li>
+        </ul>
     </section>
     </main>
 </body>
