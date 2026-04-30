@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-Title</title>
+    <title>09-Absolute Units</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        ul {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .abs1 {
+            font-size: 0.5in;
+        }
+        .abs2 {
+            font-size: 1cm;
+        }
+        .abs3 {
+            font-size: 10mm;
+        }
+        .abs4 {
+            font-size: 12pt;
+        }
+        .abs5 {
+            font-size: 2pc;
+        }
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -18,8 +39,21 @@
             <h1>09-Absolute Units</h1> <br>
             <h2>Specify a fixed length value. It doesn't matter if the screen's width or height changes.</h2>
         </header>
+        <ul>
+            <li>inch (in)</li>
+            <li>centimeter (cm)</li>
+            <li>millimeter (mm)</li>
+            <li>point (pt)</li>
+            <li>pica (pc)</li>
+        </ul>
     <section>
-        
+        <ul>
+            <li class="abs1">0.5 inch (in)</li>
+            <li class="abs2">1 centimeter (cm)</li>
+            <li class="abs3">10 millimeter (mm)</li>
+            <li class="abs4">12 point (pt)</li>
+            <li class="abs5">2 pica (pc)</li>
+        </ul>
     </section>
     </main>
 </body>
