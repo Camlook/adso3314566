@@ -1,32 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>15-Position</title>
+
     <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+
+        div.con1,
+        div.con2,
+        div.con3,
+        div.con4,
+        div.con5 {
+
+            width: 350px;
+            height: 350px;
+
+            margin: 2rem auto;
+
+            background-color: rgba(181, 150, 255, 0.5);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.con5 {
+    width: 350px;
+    height: 350px;
+    margin: 2rem auto;
+    background-color: rgba(181, 150, 255, 0.5);
+
+    overflow: auto;
+}
+
+        div.con3 {
+            position: relative;
+        }
+
+        div.normal,
+        div.relative,
+        div.absolute,
+        div.fixed,
+        div.sticky {
+
+            width: 120px;
+            height: 120px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h5 {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+
+        div.normal {
+            position: static;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        div.relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+
+            background-color: rgba(0, 255, 0, 0.5);
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+
+        div.fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+
+            background-color: rgba(255, 255, 0, 0.5);
+
+            z-index: 1000;
+        }
+
+        div.sticky {
+            position: sticky;
+            top: 0;
+
+            background-color: rgba(255, 0, 255, 0.5);
+        }
+
+        section {
+            transition: none !important;
+            transform: none !important;
+            animation: none !important;
+        }
+
+        section:hover {
+            transform: none !important;
+            transition: none !important;
+            box-shadow: none !important;
+        }
+    </style>
 </head>
 <body>
+
     <a href="/03-css/index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
-        </path>
-    </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path
+                d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+            </path>
+        </svg>
     </a>
-    
     <main>
         <header>
-            <h1>15-Position</h1> <br>
+            <h1>15-Position</h1>
+            <br>
             <h2>
-                - Normal/Static <br>
+                - Normal / Static <br>
                 - Relative <br>
                 - Absolute <br>
                 - Fixed <br>
                 - Sticky
             </h2>
         </header>
-    <section>
-        
-    </section>
+        <section>
+            <div class="con1">
+                <div class="normal">
+                    <h5>STATIC</h5>
+                </div>
+            </div>
+            <div class="con2">
+                <div class="relative">
+                    <h5>RELATIVE</h5>
+                </div>
+            </div>
+            <div class="con3">
+                <div class="absolute">
+                    <h5>ABSOLUTE</h5>
+                </div>
+            </div>
+            <div class="con4">
+                <div class="fixed">
+                    <h5>FIXED</h5>
+                </div>
+            </div>
+            <div class="con5">
+                <div class="sticky">
+                    <h5>STICKY</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veniam quos incidunt quisquam repudiandae, accusamus nulla doloribus aliquid! Ex quibusdam amet molestias modi ab explicabo architecto delectus ut facilis voluptates?
+                Vel dolores autem eos illum possimus omnis ducimus nam, reprehenderit accusamus ipsam labore, deleniti fugit nulla cum quos cupiditate commodi, quas placeat mollitia veritatis at. Distinctio tenetur suscipit dolorum saepe.
+                Doloribus atque possimus cupiditate nobis obcaecati molestiae sunt libero consectetur fugit facilis voluptates esse beatae optio architecto quasi excepturi, reiciendis molestias aut maxime illum mollitia natus. Reprehenderit iste praesentium in!
+                Est vitae voluptatem blanditiis perferendis beatae! Harum neque hic numquam temporibus accusantium consectetur dicta, nobis perferendis magnam expedita quasi aut ab ea iusto nam iste cupiditate facere odio reiciendis? Est.
+                Ducimus explicabo nulla reiciendis doloribus. Sed saepe, quis dolores unde iure facilis? Obcaecati in quo, vitae debitis alias ex culpa laudantium accusantium ratione ea a aut ab nostrum consequatur non!
+                Incidunt quibusdam eum molestiae, ea reprehenderit et? Aspernatur debitis recusandae ipsum pariatur soluta porro? Sequi nisi fugit porro, laudantium cupiditate maiores pariatur doloremque laboriosam sed delectus assumenda et, dolorem quidem!
+                Voluptatum non minus pariatur ut laborum eveniet est incidunt commodi praesentium. Atque dolores ratione perspiciatis facilis, voluptatibus incidunt doloribus neque quis nostrum molestiae facere, nam fugit architecto dolore debitis sequi.
+                Incidunt et placeat, doloribus fugiat nam voluptatem dolores ipsum autem ad eligendi odit architecto deleniti libero cupiditate adipisci, quidem dolor veritatis! Fugiat, atque ullam natus porro amet expedita suscipit iste?
+                Minima sapiente ipsa tempora at molestias cum porro corrupti libero iusto accusantium, eos commodi quo recusandae, nostrum eius rerum cumque alias? Blanditiis perspiciatis eligendi, voluptates velit vel nulla modi ex!
+                Similique perspiciatis voluptatem aspernatur fuga, obcaecati maiores iste hic debitis error? In voluptas enim rerum, temporibus cum quaerat neque dolor ipsa nemo, eius, incidunt adipisci consequatur commodi molestias? Ad, excepturi.
+                Illum fuga quasi blanditiis repudiandae error ab dolor corrupti culpa assumenda, ducimus quis! Sit exercitationem optio ut suscipit vitae? Optio soluta cum laudantium vitae placeat id exercitationem impedit quam vero.
+                Laboriosam facilis dolor aperiam quia? Alias neque consectetur expedita commodi odio dolores magni voluptates! Voluptatem deserunt libero eligendi corporis! Reiciendis placeat excepturi ullam minus repellendus unde cupiditate aperiam magnam error.
+                Ullam error temporibus necessitatibus itaque aspernatur amet, maxime, ex cumque alias maiores dicta, labore dolore dolores at velit rerum. Earum eligendi dolor voluptates commodi nobis fugit ab temporibus quidem minus.
+                Consequuntur libero enim nostrum ab, quod, autem maiores in deserunt voluptatem similique sit dolore quaerat. Voluptatibus praesentium quam itaque harum, fugit unde tempore nam, neque sequi reiciendis dolorum nemo. Itaque?
+                At debitis unde quaerat minus, dignissimos quo consequuntur? At unde aliquid corrupti ex, eligendi qui recusandae dignissimos quod sed, officiis dolorum numquam eius omnis ducimus ea iure perferendis. Quibusdam, saepe.
+                Aspernatur quos illo labore. Voluptates quas amet doloremque deleniti praesentium nobis tenetur atque, dolor ea dignissimos ab veniam nesciunt enim tempore? Aperiam cupiditate qui minus eum iusto dolores magni tempore.
+                Cum repudiandae, rem enim libero accusantium at maxime vel vitae veritatis quidem dolorum quod earum autem reiciendis doloremque quae? Quidem quis explicabo iure eum dolores voluptatibus repudiandae neque quae dignissimos.
+                At praesentium animi et ipsum laboriosam, enim aut delectus labore aliquam, inventore expedita architecto totam nobis aperiam magnam. Aspernatur sequi reiciendis exercitationem consectetur quis fuga necessitatibus doloremque! Quod, ab ratione?
+                Facilis repellendus tenetur natus repudiandae nemo deleniti error cupiditate dolore, suscipit laborum aut quisquam, culpa quos incidunt dignissimos? Quaerat aut asperiores voluptates, saepe cum quam accusantium officiis illum et consequatur.
+                In adipisci error maxime, placeat tempora et ratione, ipsam, quasi dolor dicta quae molestiae nam. Minus maiores itaque ducimus eligendi. Eveniet cum nemo impedit rem, aliquam alias iusto aperiam odit.
+                </p>
+            </div>
+        </section>
     </main>
 </body>
 </html>

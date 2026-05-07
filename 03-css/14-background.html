@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>14-Background</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        div.backgroundcolor {
+            background-color:rgb(53, 196, 84);
+            width: 350px;
+            height: 350px;
+            margin: 2rem auto;
+        }
+        div.backgroundimgrepeat {
+            background: url(../src/imgs/patron3.jpg) repeat center / contain;
+            width: 350px;
+            height: 350px;
+            margin: 2rem auto;
+        }
+        div.backgroundrepeat {
+            background: url(../src/imgs/patron3.jpg) no-repeat center / contain;
+            width: 350px;
+            height: 350px;
+            margin: 2rem auto;
+        }
+        div.backgroundposition {
+            background: url(../src/imgs/patron2.avif) no-repeat center / contain;
+            background-position: 100% 100%;
+            width: 350px;
+            height: 350px;
+            margin: 2rem auto;
+        }
+        div.backgroundsize {
+            background: url(../src/imgs/patron2.avif) no-repeat center / cover;
+            background-size: 100% 100%;
+            width: 350px;
+            height: 350px;
+            margin: 2rem auto;
+        }
+        div.backgroundattachment {
+            background: url(../src/imgs/patron.jpg) no-repeat center / contain fixed;
+            width: 350px;
+            height: 350px;
+            margin: 2rem auto;
+        }
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -21,11 +61,29 @@
                 - background-image <br>
                 - background-repeat <br>
                 - background-position <br>
-                - background-size
+                - background-size <br>
+                - background-attachment
         </h2>
         </header>
     <section>
-        
+        <h3>Background Color</h3>
+        <div class="backgroundcolor">
+        </div>
+        <h3>Background Image</h3>
+        <div class="backgroundimgrepeat">
+        </div>
+        <h3>Background Repeat</h3>
+        <div class="backgroundrepeat">
+        </div>
+        <h3>Background Position</h3>
+        <div class="backgroundposition">
+        </div>
+        <h3>Background Size</h3>
+        <div class="backgroundsize">
+        </div>
+        <h3>Background Attachment</h3>
+        <div class="backgroundattachment">
+        </div>
     </section>
     </main>
 </body>

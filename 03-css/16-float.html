@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>16-Float</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+.block::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.floatleft img {
+    all: unset;
+    float: left;
+
+    width: 300px;
+    height: 480px;
+
+    position: relative;
+    left: -50px;
+    bottom: -50px;
+    z-index: 10;
+}
+
+.floatright img {
+    all: unset;
+    float: right;
+
+    width: 350px;
+    height: 440px;
+
+    position: relative;
+    right: -80px;
+    bottom: -80px;
+    z-index: 10;
+}
+section {
+    border: 1px solid rgb(54, 54, 54);
+}
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -18,9 +54,35 @@
             <h1>16-Float</h1> <br>
             <h2>Pushes the element to either the left or right side.</h2>
         </header>
-    <section>
-        
-    </section>
+<section>
+
+    <h3>Ejemplos</h3>
+
+    <div class="block">
+        <div class="floatleft">
+            <img src="imgs/ben10.png" alt="Ben 10">
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis accusamus, quibusdam, incidunt pariatur consectetur at nobis fugit ab reprehenderit ipsum vel excepturi impedit a ratione debitis cupiditate corrupti mollitia eligendi!
+        Laborum consequatur, maiores possimus ut unde expedita accusantium vero autem, sed dolorem beatae! Sed enim dignissimos maxime. Est repellat ea eos sed incidunt dignissimos, delectus debitis nam error iure quisquam.
+        Illo aliquam hic in quidem neque. Aspernatur aut, blanditiis natus beatae doloremque provident nihil, esse placeat dicta ab veritatis, cum reprehenderit laborum accusamus nisi. Adipisci consequatur unde tenetur ipsa. Reiciendis?
+        Eum animi at voluptas illo magnam eius voluptate est incidunt, accusamus explicabo, amet molestiae quisquam, iusto inventore vel deserunt? Inventore quas ab unde possimus molestiae neque beatae voluptates sit ratione?</p>
+    </div>
+</section>
+<br><br>
+<section>
+    <div class="block">
+        <div class="floatright">
+            <img src="imgs/ghostfreak.webp" alt="Alien X">
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsa fugit dolores quo, nihil molestias possimus autem odio in labore minus ullam temporibus facilis beatae nesciunt fuga sint quisquam saepe?
+        Doloremque ratione minima quae, neque eaque commodi fuga non sunt facilis! Rem harum placeat commodi sunt in similique perferendis veritatis sint exercitationem atque aperiam aliquam ea, dicta vel error praesentium!
+        Necessitatibus odit nisi eligendi, quam distinctio laborum dignissimos libero, culpa explicabo veniam nam impedit autem natus voluptate omnis ex consectetur fugit. Qui eveniet, sint suscipit aut vitae eligendi nihil vero!
+        Explicabo soluta recusandae odit? Natus nulla aliquid sit, corrupti inventore error maiores voluptatibus, facilis excepturi obcaecati debitis cumque, laborum eum recusandae voluptates vitae atque voluptatum at hic magnam. Voluptatibus, quisquam?</p>
+    </div>
+</section>
+<br><br>
     </main>
 </body>
 </html>

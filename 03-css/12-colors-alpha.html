@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12-Colors Alpha</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        figure.ben10 {
+            background: url(imgs/ben10.png) no-repeat center / contain;
+            border: 4px solid #666;
+            margin-block: 4rem;
+            width: 380px;
+            height: 380px;
+            div {
+                height: calc(380px / 3);
+                &.box1 {
+                    background-color: rgba(0, 255, 34, 0.124);
+                }
+                &.box2 {
+                    background-color: #00ff1516;
+                }
+                &.box3 {
+                    background-color: hsla(140, 100%, 50%, 0.059);
+                }
+            }
+        }
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -19,7 +40,12 @@
             <h2>The fourth alpha channel allows you to apply opacity or transparency to the color.</h2>
         </header>
     <section>
-        
+        <h3>Example Transparent Colors</h3>
+        <figure class="ben10">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </figure>
     </section>
     </main>
 </body>
