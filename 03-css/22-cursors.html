@@ -4,23 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22-Cursors</title>
+
     <link rel="stylesheet" href="../src/css/css.css">
+
+<style>
+    section {
+        border: 1px solid rgb(54, 54, 54);
+        padding: 30px;
+    }
+
+    .demo {
+        background: rgb(20, 20, 20);
+        border: 1px solid rgb(60, 60, 60);
+        border-radius: 14px;
+
+        padding: 25px;
+        margin: 50px 0; /* 👈 MÁS SEPARACIÓN REAL */
+
+        box-shadow: 0 0 12px rgba(139, 92, 246, 0.15);
+    }
+
+    h3 {
+        color: #d8b4fe;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px; /* 👈 más espacio entre items */
+    }
+
+    .box {
+        background: rgb(30, 30, 30);
+        border: 1px solid rgb(70, 70, 70);
+        border-radius: 10px;
+
+        padding: 18px;
+        text-align: center;
+
+        transition: 0.2s ease;
+        color: white;
+        font-size: 14px;
+    }
+
+    .box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
+    }
+
+    /* CURSORS */
+    .auto { cursor: auto; }
+    .pointer { cursor: pointer; }
+    .move { cursor: move; }
+    .text { cursor: text; }
+    .wait { cursor: wait; }
+    .help { cursor: help; }
+    .crosshair { cursor: crosshair; }
+
+    .n-resize { cursor: n-resize; }
+    .s-resize { cursor: s-resize; }
+    .e-resize { cursor: e-resize; }
+    .w-resize { cursor: w-resize; }
+
+    .ne-resize { cursor: ne-resize; }
+    .nw-resize { cursor: nw-resize; }
+    .se-resize { cursor: se-resize; }
+    .sw-resize { cursor: sw-resize; }
+
+    .progress { cursor: progress; }
+    .not-allowed { cursor: not-allowed; }
+
+    .custom {
+        cursor: url("https://cdn.cursors-4u.net/previews/arrow-825426cd-preview-63.webp"), auto;
+    }
+</style>
 </head>
+
 <body>
-    <a href="/03-css/index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+
+<a href="/03-css/index.html" class="btn-home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+        <path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
         </path>
     </svg>
-    </a>
-    
-    <main>
-        <header>
-            <h1>22-Cursors</h1> <br>
-            <h2>Specifies the mouse cursor to be displayed when pointing over an element.</h2>
-        </header>
-    <section>
-        
-    </section>
-    </main>
+</a>
+
+<main>
+
+<header>
+    <h1>22-Cursors</h1>
+    <br>
+    <h2>Specifies the mouse cursor displayed when pointing over an element.</h2>
+</header>
+
+<section>
+
+    <div class="demo">
+        <h3>Cursors</h3>
+
+        <div class="grid">
+
+            <div class="box auto">auto</div>
+            <div class="box pointer">pointer</div>
+            <div class="box move">move</div>
+            <div class="box text">text</div>
+            <div class="box wait">wait</div>
+            <div class="box help">help</div>
+            <div class="box crosshair">crosshair</div>
+
+            <div class="box n-resize">n-resize</div>
+            <div class="box s-resize">s-resize</div>
+            <div class="box e-resize">e-resize</div>
+            <div class="box w-resize">w-resize</div>
+
+            <div class="box ne-resize">ne-resize</div>
+            <div class="box nw-resize">nw-resize</div>
+            <div class="box se-resize">se-resize</div>
+            <div class="box sw-resize">sw-resize</div>
+
+            <div class="box progress">progress</div>
+            <div class="box not-allowed">not-allowed</div>
+
+            <div class="box custom">custom cursor</div>
+
+        </div>
+    </div>
+
+</section>
+
+</main>
+
 </body>
 </html>

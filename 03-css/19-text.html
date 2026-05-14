@@ -4,30 +4,282 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>19-Text</title>
+
     <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        section {
+            border: 1px solid rgb(54, 54, 54);
+            padding: 25px;
+        }
+
+        .demo {
+            background: rgb(20, 20, 20);
+            border: 1px solid rgb(60, 60, 60);
+            border-radius: 10px;
+
+            padding: 18px;
+            margin: 25px 0;
+
+            box-shadow: 0 0 12px rgba(139, 92, 246, 0.20);
+            transition: 0.3s ease;
+        }
+
+        .demo:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 18px rgba(139, 92, 246, 0.40);
+        }
+
+        h3 {
+            margin-bottom: 12px;
+            color: #d8b4fe;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #e5e5e5;
+            line-height: 1.7;
+        }
+
+        code {
+            color: #c084fc;
+            font-weight: bold;
+        }
+
+        /* TEXT ALIGN */
+        .left {
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .justify {
+            text-align: justify;
+        }
+
+        /* LINE HEIGHT */
+        .lineheight {
+            line-height: 3;
+        }
+
+        /* TEXT DECORATION */
+        .underline {
+            text-decoration: underline;
+        }
+
+        .overline {
+            text-decoration: overline;
+        }
+
+        .linethrough {
+            text-decoration: line-through;
+        }
+
+        /* TEXT TRANSFORM */
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .lowercase {
+            text-transform: lowercase;
+        }
+
+        .capitalize {
+            text-transform: capitalize;
+        }
+
+        /* VERTICAL ALIGN */
+        .vertical img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        .vertical span {
+            vertical-align: middle;
+            font-size: 1.2rem;
+        }
+
+        /* TEXT INDENT */
+        .indent {
+            text-indent: 60px;
+        }
+
+        /* SPACING */
+        .letterspacing {
+            letter-spacing: 6px;
+        }
+
+        .wordspacing {
+            word-spacing: 18px;
+        }
+        .vertical img{
+            width: 60px;
+            vertical-align: middle;
+
+            background-color: transparent !important;
+            background: none !important;
+
+            box-shadow: none !important;
+            border: none !important;
+            border-radius: 0 !important;
+
+            mix-blend-mode: normal;
+        }
+    </style>
 </head>
+
 <body>
+
     <a href="/03-css/index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
-        </path>
-    </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+            </path>
+        </svg>
     </a>
-    
+
     <main>
+
         <header>
-            <h1>19-Text</h1> <br>
+            <h1>19-Text</h1>
+            <br>
+
             <h2>
                 - Align <br>
                 - Line Height <br>
                 - Decoration <br>
                 - Transform <br>
+                - Vertical Align <br>
                 - Indent <br>
                 - Spacing (word/letter)
             </h2>
         </header>
-    <section>
-        
-    </section>
+
+        <section>
+
+            <!-- TEXT ALIGN -->
+            <div class="demo">
+                <h3>Text Align</h3>
+
+                <p>
+                    The property <code>text-align</code> controls the alignment of the text.
+                </p>
+
+                <p class="left">Left aligned text.</p>
+
+                <p class="center">Center aligned text.</p>
+
+                <p class="right">Right aligned text.</p>
+
+                <p class="justify">
+                    Justified text example. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aspernatur suscipit aliquid exercitationem molestias.
+                </p>
+            </div>
+
+            <!-- LINE HEIGHT -->
+            <div class="demo">
+                <h3>Line Height</h3>
+
+                <p>
+                    The property <code>line-height</code> controls the height of each text line.
+                </p>
+
+                <p class="lineheight">
+                    This paragraph has a larger line height. <br>
+                    CSS allows better readability using line spacing. <br>
+                    Each line has more vertical separation.
+                </p>
+            </div>
+
+            <!-- TEXT DECORATION -->
+            <div class="demo">
+                <h3>Text Decoration</h3>
+
+                <p>
+                    The property <code>text-decoration</code> adds decorations to text.
+                </p>
+
+                <p class="underline">Underline example.</p>
+
+                <p class="overline">Overline example.</p>
+
+                <p class="linethrough">Line-through example.</p>
+            </div>
+
+            <!-- TEXT TRANSFORM -->
+            <div class="demo">
+                <h3>Text Transform</h3>
+
+                <p>
+                    The property <code>text-transform</code> changes the appearance of text.
+                </p>
+
+                <p class="uppercase">
+                    uppercase example
+                </p>
+
+                <p class="lowercase">
+                    LOWERCASE EXAMPLE
+                </p>
+
+                <p class="capitalize">
+                    capitalize every word example
+                </p>
+            </div>
+
+            <!-- VERTICAL ALIGN -->
+            <div class="demo">
+                <h3>Vertical Align</h3>
+
+                <p>
+                    The property <code>vertical-align</code> aligns inline elements vertically.
+                </p>
+
+                <p class="vertical">
+                    <img src="imgs/ben10.png" alt="Ben 10">
+                    <span>Image and text vertically aligned.</span>
+                </p>
+            </div>
+
+            <!-- TEXT INDENT -->
+            <div class="demo">
+                <h3>Text Indent</h3>
+
+                <p>
+                    The property <code>text-indent</code> controls paragraph indentation.
+                </p>
+
+                <p class="indent">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloremque omnis asperiores, deserunt eaque impedit dignissimos quas placeat.
+                </p>
+            </div>
+
+            <!-- LETTER & WORD SPACING -->
+            <div class="demo">
+                <h3>Letter & Word Spacing</h3>
+
+                <p>
+                    CSS can control spacing between letters and words.
+                </p>
+
+                <p class="letterspacing">
+                    Letter spacing example.
+                </p>
+
+                <p class="wordspacing">
+                    Word spacing example.
+                </p>
+            </div>
+
+        </section>
+
     </main>
+
 </body>
 </html>

@@ -4,23 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>21-Lists</title>
+
     <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        section {
+            border: 1px solid rgb(54, 54, 54);
+            padding: 25px;
+        }
+
+        .demo {
+            background: rgb(20, 20, 20);
+            border: 1px solid rgb(60, 60, 60);
+            border-radius: 10px;
+
+            padding: 18px;
+            margin: 25px 0;
+
+            box-shadow: 0 0 12px rgba(139, 92, 246, 0.20);
+            transition: 0.3s ease;
+        }
+
+        .demo:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 18px rgba(139, 92, 246, 0.40);
+        }
+
+        h3 {
+            margin-bottom: 12px;
+            color: #d8b4fe;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #e5e5e5;
+            line-height: 1.7;
+        }
+
+        code {
+            color: #c084fc;
+            font-weight: bold;
+        }
+
+        ul {
+            color: #e5e5e5;
+            margin-left: 25px;
+        }
+
+        /* LIST STYLE TYPE */
+        .type-disc {
+            list-style-type: disc;
+        }
+
+        .type-circle {
+            list-style-type: circle;
+        }
+
+        .type-square {
+            list-style-type: square;
+        }
+
+        .type-roman {
+            list-style-type: upper-roman;
+        }
+
+        /* LIST STYLE POSITION */
+        .inside {
+            list-style-position: inside;
+            background: rgb(30, 30, 30);
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .outside {
+            list-style-position: outside;
+        }
+
+        /* LIST STYLE IMAGE */
+        .image {
+            list-style-image: url("https://cdn-icons-png.flaticon.com/16/1828/1828884.png");
+        }
+
+        /* SHORTHAND */
+        .shorthand {
+            list-style: square inside;
+        }
+    </style>
 </head>
+
 <body>
+
     <a href="/03-css/index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
-        </path>
-    </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+            </path>
+        </svg>
     </a>
-    
+
     <main>
+
         <header>
-            <h1>21-Lists</h1> <br>
-            <h2>Allows you to set all the list style properties at once.</h2>
+            <h1>21-Lists</h1>
+            <br>
+
+            <h2>
+                list-style-type <br>
+                list-style-position <br>
+                list-style-image <br>
+                list-style (shorthand)
+            </h2>
         </header>
-    <section>
-        
-    </section>
+
+        <section>
+
+            <!-- TYPE -->
+            <div class="demo">
+                <h3>list-style-type</h3>
+
+                <p>
+                    Defines the type of bullet.
+                </p>
+
+                <ul class="type-disc">
+                    <li>Disc item</li>
+                    <li>Disc item</li>
+                </ul>
+
+                <ul class="type-circle">
+                    <li>Circle item</li>
+                    <li>Circle item</li>
+                </ul>
+
+                <ul class="type-square">
+                    <li>Square item</li>
+                    <li>Square item</li>
+                </ul>
+
+                <ul class="type-roman">
+                    <li>Roman item</li>
+                    <li>Roman item</li>
+                </ul>
+            </div>
+
+            <!-- POSITION -->
+            <div class="demo">
+                <h3>list-style-position</h3>
+
+                <p>
+                    Controls where the bullet is placed.
+                </p>
+
+                <ul class="inside">
+                    <li>Inside item with background</li>
+                    <li>Inside item</li>
+                </ul>
+
+                <ul class="outside">
+                    <li>Outside item</li>
+                    <li>Outside item</li>
+                </ul>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="demo">
+                <h3>list-style-image</h3>
+
+                <p>
+                    Replaces bullets with an image.
+                </p>
+
+                <ul class="image">
+                    <li>Image bullet item</li>
+                    <li>Image bullet item</li>
+                </ul>
+            </div>
+
+            <!-- SHORTHAND -->
+            <div class="demo">
+                <h3>list-style (shorthand)</h3>
+
+                <p>
+                    Combines type, position and image in one property.
+                </p>
+
+                <ul class="shorthand">
+                    <li>Shorthand item</li>
+                    <li>Shorthand item</li>
+                </ul>
+            </div>
+
+        </section>
+
     </main>
+
 </body>
 </html>
