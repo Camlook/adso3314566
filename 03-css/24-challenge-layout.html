@@ -1,166 +1,333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
-        main{
-            background-color: #17a053;
-            border: 4px solid #fff;
-            min-height: 100dvh;
-            div.logo{
-                background: url(imgs/spriteweb.png) no-repeat;
-                background-position: -20px -434px;
-                height: 120px;
-                margin: 1rem auto;
-                width: 180px;
-            }
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        #menu ul{
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            list-style-type: none;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            text-align: center;
-            font-family: roboto slab;
-        }
+      body {
+        background: #17a053;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        #menu ul li a{
-            display: block;
-            width: 170px;
-            padding: 25px 0;
-            background: #065b28;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            border-bottom: 6px solid white;
-            transition: 0.3s;
-        }
+      main {
+        background-color: #17a053;
 
-        #menu ul li a:hover{
-            background: #043215;
-            transform: translateY(-5px);
-        }
+        border: 8px solid #fff;
 
-        #sprites.sprites{
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            background: #065b28;
-            padding: 30px;
+        min-height: 100dvh;
 
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+        width: 100%;
+        max-width: 1400px;
 
-        #card.card{
-            width: 300px;
-            height: 200px;
+        margin: 0 auto;
 
-            border: 3px solid white;
-            
-            background-image: url(imgs/spriteweb.png);
-            background-position: -490px -7px;
+        padding: 20px;
+      }
 
-            overflow: hidden;
+      div.logo {
+        background: url(imgs/spriteweb.png) no-repeat;
+        background-position: -20px -434px;
+        height: 130px;
+        margin: 1rem auto;
+        width: 180px;
+      }
 
-            transition: 0.3s;
-        }
-        
-        #card.card:hover{
-            transform: scale(1.03);
-        }
+      #menu {
+        width: 90%;
+        max-width: 1400px;
 
-        #titulo.titulo{
-            width: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            text-align: center;
-            padding: 20px;
-            font-size: 22px;
-            font-weight: bold;
-        }
+        margin: 0 auto 40px auto;
+      }
 
-        #contenido.contenido{
-            width: 90%;
-            max-width: 1200px;
+      #menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
 
-            margin: 50px auto;
-            background-color: #ffffff;
-            padding: 40px;
-            
+        list-style-type: none;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
 
-        #icono.icono{
-            background: url(imgs/spriteweb.png);
-            background-position: -280px -500px;
-            width: 100px;
-            height: 100px;
-        }
+        text-align: center;
 
-        #contenido.contenido p{
-            flex: 1;
-            min-width: 300px;
-            font-size: 20px;
-            line-height: 1.8;
-            color: #444;
-            text-align: justify;
-        }
+        font-family: roboto slab;
+      }
 
-        #lata.lata{
-            background: url(imgs/spriteweb.png);
-            background-position: -900px -215px;
-            width: 80px;
-            height: 150px;
-        }
+      #menu ul li {
+        flex: 1;
+      }
+
+      #menu ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 25px 0;
+
+        background: #065b28;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 20px;
+
+        border-bottom: 6px solid white;
+
+        transition: 0.3s;
+      }
+
+      #menu ul li a:hover {
+        background: #043215;
+        border-bottom: 6px solid yellow;
+      }
+
+      #sprites.sprites {
+        width: 90%;
+        max-width: 1200px;
+
+        margin: auto;
+
+        background: #065b28;
+
+        padding: 30px;
+
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      #card.card {
+        width: 300px;
+        height: 200px;
+
+        border: 3px solid white;
+
+        background-image: url(imgs/spriteweb.png);
+        background-position: -490px -7px;
+
+        overflow: hidden;
+      }
+
+      #titulo.titulo {
+        width: 100%;
+
+        background: rgba(255, 255, 255, 0.5);
+
+        text-align: center;
+
+        padding: 20px;
+
+        font-size: 22px;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+      }
+
+      #card.card:hover #titulo.titulo {
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      #contenido.contenido {
+        width: 90%;
+        max-width: 1200px;
+
+        margin: 50px auto;
+
+        background: rgba(0, 0, 0, 0.4);
+
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .info {
+        background: white;
+
+        padding: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      #icono.icono {
+        background: url(imgs/spriteweb.png);
+
+        background-position: -280px -500px;
+
+        width: 100px;
+        height: 100px;
+      }
+
+      #contenido.contenido p {
+        flex: 1;
+
+        min-width: 300px;
+
+        font-size: 20px;
+
+        line-height: 1.8;
+
+        color: #444;
+
+        text-align: justify;
+      }
+
+      #contenido.contenido p:hover {
+        color: #17a053;
+      }
+
+      #lata.lata {
+        background: url(imgs/spriteweb.png);
+
+        background-position: -900px -215px;
+
+        width: 80px;
+        height: 150px;
+      }
+
+      footer {
+        width: 90%;
+        max-width: 1200px;
+
+        background: white;
+
+        margin: 50px auto;
+
+        padding: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .footer-logo {
+        background: url(imgs/spriteweb.png) no-repeat;
+
+        background-position: -500px -420px;
+
+        width: 245px;
+        height: 180px;
+      }
+
+      .links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .links a {
+        text-decoration: none;
+
+        color: black;
+
+        font-size: 20px;
+
+        text-transform: uppercase;
+
+        padding-bottom: 10px;
+
+        border-bottom: 6px solid transparent;
+
+        transition: 0.3s;
+      }
+
+      .links a:hover {
+        border-bottom: 6px solid #17a053;
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <main>
-    <div class="logo"></div>
-    <nav id="menu" class="menu">
+      <div class="logo"></div>
+
+      <nav id="menu" class="menu">
         <ul>
-            <li><a href="">INICIO</a></li>
-            <li><a href="">NOSOTROS</a></li>
-            <li><a href="">PORTAFOLIO</a></li>
-            <li><a href="">SERVICIOS</a></li>
-            <li><a href="">CONTACTOS</a></li>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#nosotros">NOSOTROS</a></li>
+          <li><a href="#portafolio">PORTAFOLIO</a></li>
+          <li><a href="#servicios">SERVICIOS</a></li>
+          <li><a href="#contacto">CONTACTOS</a></li>
         </ul>
-    <section id="sprites" class="sprites">
+      </nav>
+
+      <section id="sprites" class="sprites">
         <div id="card" class="card">
-            <div id="titulo" class="titulo">
-                Sprite 01
-            </div>
+          <div id="titulo" class="titulo">Sprite 01</div>
         </div>
-                <div id="card" class="card">
-            <div id="titulo" class="titulo">
-                Sprite 02
-            </div>
+
+        <div id="card" class="card">
+          <div id="titulo" class="titulo">Sprite 02</div>
         </div>
-                <div id="card" class="card">
-            <div id="titulo" class="titulo">
-                Sprite 03
-            </div>
+
+        <div id="card" class="card">
+          <div id="titulo" class="titulo">Sprite 03</div>
         </div>
-    </section>
-    <section id="contenido" class="contenido">
-        <div id="icono" class="icono"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aspernatur ab doloremque exercitationem alias ex ad facere. Odio alias veritatis vel veniam ratione magnam ex beatae, ipsa quasi odit atque.</p>
-        <div id="lata" class="lata"></div>
-    </section>
-    
-    </nav>
+      </section>
+
+      <section id="contenido" class="contenido">
+        <div class="info">
+          <div id="icono" class="icono"></div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nihil? Architecto maiores rem ducimus aliquid magnam non, et velit eveniet voluptate magni earum, deleniti beatae esse, odio enim labore nihil!
+            Aut dolores vero quod veniam nobis possimus aspernatur sint harum fugiat perspiciatis, hic, consectetur id quibusdam quasi labore dolore placeat perferendis natus laborum est praesentium! Commodi rem hic molestias vero?
+          </p>
+
+          <div id="lata" class="lata"></div>
+        </div>
+
+        <div class="info">
+          <div id="icono" class="icono"></div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora soluta illum similique voluptas delectus quam et ipsum modi eligendi adipisci? Nihil tempora cupiditate, corporis molestias quae veniam aliquam unde sunt.
+            Ipsum, ullam id minima quidem cupiditate magnam facere, fugiat illo architecto rerum autem vero nostrum? Vitae officia minus quaerat velit facilis corporis quidem illum aut distinctio ea rem, voluptatibus inventore.
+          </p>
+
+          <div id="lata" class="lata"></div>
+        </div>
+
+        <div class="info">
+          <div id="icono" class="icono"></div>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ab dicta soluta aut repellat fugit est explicabo debitis, totam porro. Sint dolorem quisquam obcaecati omnis itaque, debitis nesciunt dolor inventore.
+            Nobis, maiores omnis ad nesciunt ducimus temporibus impedit tempore vel ipsum expedita, officia id dolore. Officiis qui illo natus maiores facere quo sed, itaque praesentium corporis, suscipit voluptate ratione perferendis.
+          </p>
+
+          <div id="lata" class="lata"></div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-logo"></div>
+
+        <div class="links">
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </footer>
     </main>
-</body>
+  </body>
 </html>
