@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00-Title</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        div.box{
+            border-radius: 20%;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+        }
+        div.box1{
+            box-shadow: 0 0 12px #7829f0;
+        }
+        div.box2{
+            box-shadow: -10px -10px 24px 0 #57ff79;
+        }
+        div.box3{
+            box-shadow: 0 0 20px #fffa64
+        }
+        div.box4{
+            box-shadow: 4px 4px 0 #cc0,
+                        8px 8px 0 #00c,
+                        12px 12px 0 #c00
+
+        }
+        div.images img{
+            all: unset;
+        }
+        div.images{
+            display: flex;
+            justify-content: center;
+            margin-block: 2rem;
+            gap: 1rem;
+        }
+        div.images img:first-child{
+            box-shadow: 0 0 12px #fff;
+        }
+        div.images img:last-child{
+            filter: drop-shadow(0 0 12px #fff);
+        }
+
+    </style>
+</head>
+<body>
+    <a href="/03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+        </path>
+    </svg>
+    </a>
+    
+    <main>
+        <header>
+            <h1>00-Title</h1> <br>
+            <h2>Description</h2>
+        </header>
+    <section>
+        <h3>box-shadow: 0 0 12px #fff</h3>
+        <br>
+        <div class="box box1"></div>
+        <br>
+        <h3>box-shadow: -10px -10px 24px 0 #fff</h3>
+        <br>
+        <div class="box box2"></div>
+        <br>
+        <h3>box-shadow: 0 0 20px #fff</h3>
+        <br>
+        <div class="box box3"></div>
+        <br>
+        <h3>box-shadow: multiple </h3>
+        <br>
+        <div class="box box4"></div>
+        <br>
+        <h3>box-shadow vs drop-shadow</h3>
+        <br>
+        <div class="images">
+            <img src="imgs/heatblast.webp" width="180">
+            <img src="imgs/heatblast.webp" width="180">
+        </div>
+    </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26-Border Radius</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        div {
+            color: black;
+            height: 70px;
+            width: 70px;
+            transition: all 0.4s ease-in;
+        }
+        div:hover {
+                cursor: url("https://cdn.cursors-4u.net/previews/arrow-825426cd-preview-63.webp"), auto;
+                transform: scale(1.2);
+                box-shadow: 0 6px 30px rgba(140, 0, 255, 0.918) inset;
+        }
+        .b1{
+            border-radius: 50%;
+            background-color: rgb(27, 248, 112);
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .b2{
+            border-radius: 50px 0 14px;
+            background-color: rgb(98, 243, 119);
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .b3{
+            border-radius: 100px 0 0 150px;
+            background-color: rgb(160, 239, 159);
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .b4{
+            border-radius: 0 0 0 100px;
+            background-color: rgb(103, 103, 255);
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .b5{
+            border-radius: 1px 40px 500px 1000px;
+            background-color: rgb(64, 7, 149);
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .b6{
+            color: aqua;
+            border-radius: 150px 151px 0 150px;
+            background-color: rgb(82, 14, 134);
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="/03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+        </path>
+    </svg>
+    </a>
+    
+    <main>
+        <header>
+            <h1>26-Border Radius</h1> 
+            <br>
+            <h2>Property defines the radius of the element's corners.</h2>
+        </header>
+    <section>
+        <h3>Border-Radius: 50%</h3>
+        <br>
+        <div class="b1"></div>
+        <br>
+        <h3>Border-Radius: 50px 0 14px</h3>
+        <br>
+        <div class="b2"></div>
+        <br>
+        <h3>Border-Radius: 100px 0 0 150px</h3>
+        <br>
+        <div class="b3"></div>
+        <br>
+        <h3>Border-Radius: 0 0 0 100px</h3>
+        <br>
+        <div class="b4"></div>
+        <br>
+        <h3>Border-Radius: 1px 40px 500px 1000px</h3>
+        <br>
+        <div class="b5"></div>
+        <br>
+        <h3>Border-Radius: 150px 151px 0 150px</h3>
+        <br>
+        <div class="b6"></div>
+    </section>
+    </main>
+</body>
+</html>

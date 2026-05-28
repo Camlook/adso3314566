@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00-Title</title>
+    <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        figure.frame {
+            background: #fff;
+            height: calc(33*20px);
+            width: calc(30*20px);
+            margin: 2rem auto;
+            zoom: 0.60;
+        }
+
+        div.squares {
+            background: url(imgs/square.png);
+            opacity: 0.2;
+            z-index: 2;
+            margin-top: -20px;
+            height: calc(33*20px);
+        }
+
+        div.ben {
+            height: 20px;
+            width: 20px;
+
+            box-shadow:
+                60px 640px 0 0 black,
+                80px 640px 0 0 black,
+                100px 640px 0 0 black,
+                120px 640px 0 0 black,
+                140px 640px 0 0 black,
+                160px 640px 0 0 black,
+                180px 640px 0 0 black,
+                300px 640px 0 0 black,
+                320px 640px 0 0 black,
+                340px 640px 0 0 black,
+                360px 640px 0 0 black,
+                380px 640px 0 0 black,
+                400px 640px 0 0 black,
+                440px 640px 0 0 black,
+                460px 640px 0 0 black,
+                20px 620px 0 0 black,
+                40px 620px 0 0 black,
+                60px 620px 0 0 black,
+                80px 620px 0 0 black,
+                100px 620px 0 0 black,
+                180px 620px 0 0 #bdbdbd,
+                200px 620px 0 0 black,
+                280px 620px 0 0 black,
+                300px 620px 0 0 black,
+                320px 620px 0 0 #878787,
+                340px 620px 0 0 #bdbdbd,
+                360px 620px 0 0 #bdbdbd,
+                380px 620px 0 0 #878787,
+                400px 620px 0 0 black,
+                420px 620px 0 0 black,
+                440px 620px 0 0 black,
+                460px 620px 0 0 #bdbdbd,
+                480px 620px 0 0 black,
+                20px 600px 0 0 black,
+                40px 600px 0 0 black,
+                60px 600px 0 0 black,
+                80px 600px 0 0 black,
+                100px 600px 0 0 black,
+                140px 600px 0 0 black,
+                160px 600px 0 0 black,
+                200px 600px 0 0 black,
+                280px 600px 0 0 black,
+                300px 600px 0 0 black,
+                320px 600px 0 0 #bdbdbd,
+                340px 600px 0 0 #bdbdbd,
+                360px 600px 0 0 #bdbdbd,
+                380px 600px 0 0 #bdbdbd,
+                400px 600px 0 0 black,
+                420px 600px 0 0 black,
+                440px 600px 0 0 black,
+                460px 600px 0 0 #878787,
+                480px 600px 0 0 #bdbdbd,
+                500px 600px 0 0 black,
+                0px 580px 0 0 black,
+                20px 580px 0 0 black,
+                40px 580px 0 0 black,
+                60px 580px 0 0 black,
+                80px 580px 0 0 black,
+                100px 580px 0 0 black,
+                120px 580px 0 0 black,
+                140px 580px 0 0 black,
+                160px 580px 0 0 black,
+                180px 580px 0 0 white,
+                200px 580px 0 0 black,
+                280px 580px 0 0 black,
+                300px 580px 0 0 black,
+                320px 580px 0 0 #bdbdbd,
+                340px 580px 0 0 #bdbdbd,
+                360px 580px 0 0 #bdbdbd,
+                380px 580px 0 0 #878787,
+                400px 580px 0 0 black,
+                420px 580px 0 0 black,
+                440px 580px 0 0 black,
+                460px 580px 0 0 black,
+                480px 580px 0 0 #bdbdbd,
+                500px 580px 0 0 black,
+                0px 560px 0 0 black,
+                20px 560px 0 0 black,
+                40px 560px 0 0 black,
+                60px 560px 0 0 black,
+                80px 560px 0 0 black,
+                100px 560px 0 0 black,
+                120px 560px 0 0 black,
+                140px 560px 0 0 black,
+                160px 560px 0 0 black,
+                180px 560px 0 0 white,
+                200px 560px 0 0 black,
+                280px 560px 0 0 black,
+                300px 560px 0 0 black,
+                320px 560px 0 0 #bdbdbd,
+                340px 560px 0 0 #bdbdbd,
+                360px 560px 0 0 #bdbdbd,
+                380px 560px 0 0 black,
+                400px 560px 0 0 #878787,
+                420px 560px 0 0 black,
+                440px 560px 0 0 black,
+                460px 560px 0 0 black,
+                480px 560px 0 0 black,
+                500px 560px 0 0 black,
+                0px 540px 0 0 black,
+                20px 540px 0 0 black,
+                40px 540px 0 0 black,
+                60px 540px 0 0 black,
+                80px 540px 0 0 black,
+                100px 540px 0 0 black,
+                120px 540px 0 0 black,
+                140px 540px 0 0 black,
+                160px 540px 0 0 black,
+                180px 540px 0 0 white,
+                200px 540px 0 0 #bdbdbd,
+                220px 540px 0 0 black,
+                280px 540px 0 0 black,
+                300px 540px 0 0 black,
+                320px 540px 0 0 #bdbdbd,
+                340px 540px 0 0 #bdbdbd,
+                360px 540px 0 0 #bdbdbd,
+                380px 540px 0 0 black,
+                400px 540px 0 0 #bdbdbd,
+                420px 540px 0 0 black,
+                440px 540px 0 0 black,
+                460px 540px 0 0 black,
+                480px 540px 0 0 black,
+                500px 540px 0 0 black,
+                20px 520px 0 0 black,
+                40px 520px 0 0 black,
+                60px 520px 0 0 black,
+                80px 520px 0 0 black,
+                100px 520px 0 0 black,
+                120px 520px 0 0 black,
+                140px 520px 0 0 black,
+                160px 520px 0 0 black,
+                180px 520px 0 0 white,
+                200px 520px 0 0 white,
+                220px 520px 0 0 black,
+                280px 520px 0 0 black,
+                300px 520px 0 0 #878787,
+                320px 520px 0 0 #bdbdbd,
+                340px 520px 0 0 #bdbdbd,
+                360px 520px 0 0 #bdbdbd,
+                380px 520px 0 0 black,
+                400px 520px 0 0 #bdbdbd,
+                420px 520px 0 0 black,
+                440px 520px 0 0 black,
+                460px 520px 0 0 black,
+                480px 520px 0 0 black,
+                500px 520px 0 0 black,
+                20px 500px 0 0 black,
+                40px 500px 0 0 black,
+                60px 500px 0 0 black,
+                80px 500px 0 0 #8cd928,
+                100px 500px 0 0 black,
+                120px 500px 0 0 black,
+                140px 500px 0 0 black,
+                160px 500px 0 0 white,
+                180px 500px 0 0 white,
+                200px 500px 0 0 white,
+                220px 500px 0 0 black,
+                240px 500px 0 0 black,
+                260px 500px 0 0 black,
+                280px 500px 0 0 black,
+                300px 500px 0 0 #bdbdbd,
+                320px 500px 0 0 #bdbdbd,
+                340px 500px 0 0 #bdbdbd,
+                360px 500px 0 0 #878787,
+                380px 500px 0 0 black,
+                400px 500px 0 0 #bdbdbd,
+                420px 500px 0 0 #878787,
+                440px 500px 0 0 black,
+                460px 500px 0 0 black,
+                480px 500px 0 0 black,
+                500px 500px 0 0 black,
+                20px 480px 0 0 black,
+                40px 480px 0 0 black,
+                60px 480px 0 0 black,
+                80px 480px 0 0 #8cd928,
+                100px 480px 0 0 black,
+                120px 480px 0 0 black,
+                140px 480px 0 0 black,
+                160px 480px 0 0 white,
+                180px 480px 0 0 white,
+                200px 480px 0 0 white,
+                220px 480px 0 0 #bdbdbd,
+                240px 480px 0 0 black,
+                260px 480px 0 0 black,
+                280px 480px 0 0 black,
+                300px 480px 0 0 #878787,
+                320px 480px 0 0 #bdbdbd,
+                340px 480px 0 0 #bdbdbd,
+                360px 480px 0 0 black,
+                380px 480px 0 0 #878787,
+                400px 480px 0 0 #bdbdbd,
+                420px 480px 0 0 #bdbdbd,
+                440px 480px 0 0 black,
+                460px 480px 0 0 black,
+                480px 480px 0 0 black;
+
+
+
+
+            
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path
+                d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+            </path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>00-Title</h1> <br>
+            <h2>Description</h2>
+        </header>
+        <section>
+            <figure class="frame">
+                <div class="ben"></div>
+                <div class="squares"></div>
+            </figure>
+        </section>
+    </main>
+</body>
+
+</html>
