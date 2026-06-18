@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>32-clip-path</title>
     <link rel="stylesheet" href="../src/css/css.css">
+    <style>
+        .clip1 {
+            clip-path: polygon(0 13%, 35% 25%, 27% 0, 76% 0, 65% 25%, 100% 11%, 100% 66%, 65% 50%, 83% 100%, 18% 100%, 35% 50%, 0 66%);
+            width: 200px;
+            height: 200px;
+            background-image: url(/03-css/imgs/bgfire.jpg);
+            margin: 0 auto;
+        }
+
+        .clip2 {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            width: 200px;
+            height: 200px;
+            background-image: url(/03-css/imgs/green.jpg);
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <a href="/03-css/index.html" class="btn-home">
@@ -19,8 +36,10 @@
             <h2>Property lets you clip an element to a basic shape.</h2>
         </header>
     <section>
-        div.
-    </section>
+        <div class="clip1"></div>
+        <br>
+        <div class="clip2"></div>
+        <br>
     </main>
 </body>
 </html>
