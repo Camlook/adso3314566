@@ -1,45 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-Title</title>
+    <title>29-New Backgrounds</title>
     <link rel="stylesheet" href="../src/css/css.css">
-<style>
-    .bg{
-        width: 320px;
-        height: 452px;
-        background-image: url(imgs/bg2.png), url(imgs/bg3.png), url(imgs/bg1.png);
-        background-position: center, center;  
-    }
-    .ola{
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(yellow 0 50%, blue 50% 80%, red 80% 100%);
-    }
-</style>
+    <style>
+        .bg {
+            width: 320px;
+            height: 452px;
+            background-image: url(imgs/bg2.png), url(imgs/bg3.png), url(imgs/bg1.png);
+            background-position: center, center;
+            margin: 0 auto;
+        }
+
+        .ola {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(yellow 0 45%, blue 45% 75%, red 75% 100%);
+            border-radius: 4%;
+            margin: 0 auto;
+        }
+
+        .gr1 {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(to right, blue, rgb(0, 195, 255));
+            margin: 0 auto;
+        }
+
+        .gr2 {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(to bottom, rgb(0, 255, 13), rgb(47, 13, 72));
+            margin: 0 auto;
+        }
+
+        .ver {
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(to right, white 50%, black 50%);
+            background-size: 50px;
+            margin: 0 auto;
+        }
+
+        .rad {
+            width: 320px;
+            height: 200px;
+            background: radial-gradient(rgb(141, 255, 164), rgb(0, 82, 29));
+            margin: 0 auto;
+        }
+
+        .bull {
+            width: 320px;
+            height: 200px;
+            background: radial-gradient(circle, white 20%, black 20%, black 40%, white 40%, white 60%, black 60%, black 80%, white 80%, white 100%);
+            margin: 0 auto;
+        }
+
+        .comic {
+            width: 320px;
+            height: 200px;
+            background: conic-gradient(rgb(132, 255, 132), rgb(5, 167, 104), rgb(43, 220, 200), rgb(27, 146, 206), rgb(155, 132, 255), rgb(156, 90, 249));
+            margin: 0 auto;
+        }
+
+        .clip {
+            font-size: 100px;
+            background: linear-gradient(45deg, rgb(238, 5, 222) 0, rgb(75, 2, 114) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .clip2 {
+            font-size: 100px;
+            background: url(/03-css/imgs/green.jpg);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.838));
+        }
+
+        .mask {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(rgb(119, 0, 255), rgb(17, 255, 0));
+            margin: 0 auto;
+            -webkit-mask-image: url(imgs/skull-fill.svg);
+            mask-image: url(imgs/skull-fill.svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
+    </style>
 </head>
+
 <body>
     <a href="/03-css/index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
-        </path>
-    </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path
+                d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+            </path>
+        </svg>
     </a>
-    
+
     <main>
         <header>
             <h1>29-New Background</h1> <br>
             <h2>Description</h2>
         </header>
-    <section>
-        <h3>Overlapped Images</h3>
-        <br>
-        <div class="bg"></div>
-        <br>
-        <h3>Colombia Flag with Gradients</h3>
-        <br>
-        <div class="ola"></div>
-    </section>
+        <section>
+            <h3>BGs Multiplied</h3>
+            <br>
+            <div class="bg"></div>
+            <br>
+            <h3>BGs Gradient</h3>
+            <h4>Lineal-gradient to right and Lineal-gradient</h4>
+            <div class="gr1"></div>
+            <br>
+            <div class="gr2"></div>
+            <br>
+            <h3>Colombia Flag with Gradients</h3>
+            <br>
+            <div class="ola"></div>
+            <br>
+            <h3>Vertical lines</h3>
+            <br>
+            <div class="ver"></div>
+            <br>
+            <h3>Radial Gradient</h3>
+            <br>
+            <div class="rad"></div>
+            <br>
+            <h3>Bullseye</h3>
+            <br>
+            <div class="bull"></div>
+            <br>
+            <h3>Comic Gradient</h3>
+            <br>
+            <div class="comic"></div>
+            <br>
+            <h3>BGs Clip</h3>
+            <br>
+            <div class="clip">ADSO</div>
+            <br>
+            <div class="clip2">GREEN</div>
+            <br>
+            <h3>BGs Mask</h3>
+            <br>
+            <div class="mask"></div>
+            <br>
+        </section>
     </main>
 </body>
+
 </html>
