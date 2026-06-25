@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-media-queries</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+        *{
+            transition: all 0.5s ease-in;
+        }
+        body{
+            font-family: Poppins;
+            background-color: #013571;
+            color: #fff;
+            main {
+                padding: 4rem;
+                header{
+                    figure.logo{
+                        background: url(imgs/pepsi01.png);
+                        height: 354px;
+                        width: 919px;
+                        margin: 0 auto;
+                    }
+                }
+                section{
+                    h1{
+                        text-align: center;
+                        font-size: 4rem;
+                        span.md,span.sm {
+                            display: none;
+                        } 
+                    }
+                    p {
+                        text-align: justify;
+                        margin-block: justify;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+        @media (max-width: 1024px){
+            body main {
+                header{
+                    figure.logo{
+                        height: 354px;
+                        width: 348px;
+                        margin: 0 auto;
+                        background: url(imgs/pepsi02.png) no-repeat center;
+                    }
+                }
+                section {
+                    h1 {
+                        font-size: 3rem;
+                        span.lg, span.sm {
+                            display: none;
+                        }
+                        span.md{
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 780px){
+            body main {
+                header{
+                    figure.logo{
+                        height: 154px;
+                        width: 162px;
+                        background: url(imgs/pepsi03.png) no-repeat center;
+                    }
+                }
+                section {
+                    h1 {
+                        font-size: 3rem;
+                        span.md, span.lg {
+                            display: none;
+                        }
+                        span.sm{
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+        </header>
+        <section>
+            <h1>
+                Media Queries
+                <span class="lg"> (> 1024px 🖥️ Desktop) </span>
+                <span class="md"> (< 1024px 🔳 Tablet) </span>
+                <span class="sm"> (< 780px 📱Mobile) </span>
+            </h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur autem architecto, quidem quaerat unde deleniti voluptatibus soluta at necessitatibus non blanditiis animi iure praesentium. Magnam perspiciatis rem cum amet natus cumque quibusdam minima provident. In aliquid voluptatibus earum corporis sed harum placeat ad eius, quaerat laboriosam illo nihil praesentium consequuntur alias soluta reiciendis commodi blanditiis ratione molestiae incidunt quae laudantium accusantium. Perferendis, sed perspiciatis voluptatem vitae velit tempora maxime, iusto consequuntur corrupti non rerum voluptate earum atque quod harum at voluptatum a debitis natus minus sit quam expedita! Nobis eveniet voluptates, eaque ad quidem praesentium. Dignissimos rerum debitis impedit aliquid voluptatem nemo reiciendis praesentium ullam exercitationem unde! Enim odio alias aspernatur voluptatum deserunt nulla dignissimos ex fugit, dolore at itaque!</p>
+        </section>
+    </main>
+</body>
+</html>

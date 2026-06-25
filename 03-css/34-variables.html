@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34-Variables</title>
+
+    <style>
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #c084fc;
+            --bg-dark: #0f0f12;
+            --bg-card: #18181b;
+            --text-color: #fafafa;
+            --radius: 16px;
+            --spacing: 1rem;
+            --shadow: 0 10px 25px rgba(139, 92, 246, .25);
+        }
+
+        section {
+            display: grid;
+            gap: var(--spacing);
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            color: var(--text-color);
+            padding: 1.25rem;
+            border-radius: var(--radius);
+            border: 1px solid rgba(139, 92, 246, .2);
+            box-shadow: var(--shadow);
+            transition: .3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .card h3 {
+            margin-bottom: .5rem;
+            color: var(--primary-color);
+        }
+
+        .card:nth-child(2) h3 {
+            color: var(--secondary-color);
+        }
+
+        .card:nth-child(3) h3 {
+            color: #d8b4fe;
+        }
+
+        .card:nth-child(4) h3 {
+            color: #e9d5ff;
+        }
+
+        .card:nth-child(5) h3 {
+            background: linear-gradient(90deg, #8b5cf6, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card p {
+            color: #d4d4d8;
+            line-height: 1.6;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../src/css/css.css">
+</head>
+
+<body>
+
+    <a href="/03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"></path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>34-Variables</h1>
+            <br>
+            <h2>The var() function is used to insert the value of a CSS variable.</h2>
+        </header>
+
+        <section>
+
+            <div class="card">
+                <h3>--primary-color</h3>
+                <p>
+                    Main accent color used throughout the interface.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>--secondary-color</h3>
+                <p>
+                    Supports the primary color with additional contrast.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>--spacing</h3>
+                <p>
+                    Controls padding, margins and element separation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>--radius</h3>
+                <p>
+                    Defines the rounded corners used across components.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CSS Variables</h3>
+                <p>
+                    Change a value once and update the entire design instantly.
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
