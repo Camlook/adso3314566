@@ -1,105 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>38-media-queries</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben 10</title>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
-        *{
-            transition: all 0.5s ease-in;
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: 0.4s;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Poppins;
+        background: url(https://mrwallpaper.com/images/hd/ben-10-omnitrix-glowing-in-the-dark-6eaq1yiakr667tuo.jpg)
+          no-repeat center;
+        background-size: cover;
+        color: white;
+      }
+
+      main {
+        width: 95%;
+        max-width: 1200px;
+        margin: 30px auto;
+      }
+
+      .logo img {
+        display: block;
+        margin: 0 auto 50px;
+        max-width: 100%;
+      }
+
+      .seasons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 60px;
+      }
+
+      .card {
+        width: 250px;
+        height: 210px;
+        border: 3px solid rgb(5, 145, 0);
+        background: url("https://w0.peakpx.com/wallpaper/944/716/HD-wallpaper-smart-watch-ben-10-green-light-animated.jpg")
+          center;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 0 20px lime;
+      }
+
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .description {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        padding: 25px;
+        margin: 0 auto 40px;
+        max-width: 1100px;
+        box-shadow: 0 0 20px rgba(0, 255, 34, 0.2);
+      }
+
+      .description img {
+        width: 220px;
+        height: 280px;
+        object-fit: contain;
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      .text h2 {
+        color: #46ff46;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .line {
+        width: 100%;
+        height: 3px;
+        background: #2cff2c;
+        margin-bottom: 20px;
+      }
+
+      .text p {
+        text-align: justify;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 1024px) {
+        body main {
+          .seasons {
+            flex-wrap: wrap;
+          }
+
+          .card {
+            width: 45%;
+          }
         }
-        body{
-            font-family: Poppins;
-            background-color: #013571;
-            color: #fff;
-            main {
-                padding: 4rem;
-                header{
-                    figure.logo{
-                        background: url(imgs/pepsi01.png);
-                        height: 354px;
-                        width: 919px;
-                        margin: 0 auto;
-                    }
-                }
-                section{
-                    h1{
-                        text-align: center;
-                        font-size: 4rem;
-                        span.md,span.sm {
-                            display: none;
-                        } 
-                    }
-                    p {
-                        text-align: justify;
-                        margin-block: justify;
-                        line-height: 2rem;
-                    }
-                }
-            }
+      }
+
+      @media (max-width: 780px) {
+        body main {
+          .seasons {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .card {
+            width: 280px;
+          }
+
+          .description {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .description img {
+            width: 180px;
+            height: 220px;
+          }
+
+          .text p {
+            text-align: center;
+          }
         }
-        @media (max-width: 1024px){
-            body main {
-                header{
-                    figure.logo{
-                        height: 354px;
-                        width: 348px;
-                        margin: 0 auto;
-                        background: url(imgs/pepsi02.png) no-repeat center;
-                    }
-                }
-                section {
-                    h1 {
-                        font-size: 3rem;
-                        span.lg, span.sm {
-                            display: none;
-                        }
-                        span.md{
-                            display: inline;
-                        }
-                    }
-                }
-            }
-        }
-        @media (max-width: 780px){
-            body main {
-                header{
-                    figure.logo{
-                        height: 154px;
-                        width: 162px;
-                        background: url(imgs/pepsi03.png) no-repeat center;
-                    }
-                }
-                section {
-                    h1 {
-                        font-size: 3rem;
-                        span.md, span.lg {
-                            display: none;
-                        }
-                        span.sm{
-                            display: inline;
-                        }
-                    }
-                }
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <main>
-        <header>
-            <figure class="logo"></figure>
-        </header>
-        <section>
-            <h1>
-                Media Queries
-                <span class="lg"> (> 1024px 🖥️ Desktop) </span>
-                <span class="md"> (< 1024px 🔳 Tablet) </span>
-                <span class="sm"> (< 780px 📱Mobile) </span>
-            </h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur autem architecto, quidem quaerat unde deleniti voluptatibus soluta at necessitatibus non blanditiis animi iure praesentium. Magnam perspiciatis rem cum amet natus cumque quibusdam minima provident. In aliquid voluptatibus earum corporis sed harum placeat ad eius, quaerat laboriosam illo nihil praesentium consequuntur alias soluta reiciendis commodi blanditiis ratione molestiae incidunt quae laudantium accusantium. Perferendis, sed perspiciatis voluptatem vitae velit tempora maxime, iusto consequuntur corrupti non rerum voluptate earum atque quod harum at voluptatum a debitis natus minus sit quam expedita! Nobis eveniet voluptates, eaque ad quidem praesentium. Dignissimos rerum debitis impedit aliquid voluptatem nemo reiciendis praesentium ullam exercitationem unde! Enim odio alias aspernatur voluptatum deserunt nulla dignissimos ex fugit, dolore at itaque!</p>
-        </section>
+      <div class="logo">
+        <img src="imgs/logo10.png" alt="" />
+      </div>
+
+      <section class="seasons">
+        <a href="#original" class="card">
+          <img src="imgs/b10s1.png" alt="" />
+          <div class="info">Ben 10 Original</div>
+        </a>
+
+        <a href="#alienforce" class="card">
+          <img src="imgs/b10s2.png" alt="" />
+          <div class="info">Alien Force</div>
+        </a>
+
+        <a href="#ultimate" class="card">
+          <img src="imgs/b10s3.png" alt="" />
+          <div class="info">Ultimate Alien</div>
+        </a>
+
+        <a href="#omniverse" class="card">
+          <img src="imgs/b10s4.png" alt="" />
+          <div class="info">Omniverse</div>
+        </a>
+      </section>
+
+      <section class="description" id="original">
+        <img src="imgs/b10s1.png" alt="" />
+
+        <div class="text">
+          <h2>Ben 10 Original</h2>
+          <div class="line"></div>
+
+          <p>
+            Con tan solo diez años, Ben Tennyson descubre el Omnitrix durante
+            unas vacaciones de verano junto a su abuelo Max y su prima Gwen. A
+            partir de ese momento, comienza una aventura donde aprende que ser
+            un héroe significa ayudar a los demás incluso cuando las cosas
+            parecen imposibles. Su gran imaginación, confianza y valentía lo
+            convierten en uno de los protectores más jóvenes de la Tierra.
+          </p>
+        </div>
+      </section>
+
+      <section class="description" id="alienforce">
+        <img src="imgs/b10s2.png" alt="" />
+
+        <div class="text">
+          <h2>Ben 10 Alien Force</h2>
+          <div class="line"></div>
+
+          <p>
+            Cinco años después de encontrar el Omnitrix, Ben regresa a la acción
+            con una actitud mucho más madura y responsable. Junto a Gwen y Kevin
+            Levin enfrenta una invasión alienígena mientras protege el planeta
+            de nuevas amenazas. Esta versión demuestra un mayor liderazgo,
+            inteligencia y dominio de sus poderes, convirtiéndose en un
+            verdadero héroe reconocido por todos.
+          </p>
+        </div>
+      </section>
+
+      <section class="description" id="ultimate">
+        <img src="imgs/b10s3.png" alt="" />
+
+        <div class="text">
+          <h2>Ben 10 Ultimate Alien</h2>
+          <div class="line"></div>
+
+          <p>
+            Tras revelar al mundo su identidad, Ben utiliza el Ultimatrix, un
+            dispositivo capaz de evolucionar a sus alienígenas hacia versiones
+            mucho más poderosas. Mientras combate enemigos cada vez más
+            peligrosos, también debe enfrentarse a la presión de ser una figura
+            pública. Su experiencia y determinación lo convierten en uno de los
+            héroes más fuertes del universo.
+          </p>
+        </div>
+      </section>
+
+      <section class="description" id="omniverse">
+        <img src="imgs/b10s4.png" alt="" />
+
+        <div class="text">
+          <h2>Ben 10 Omniverse</h2>
+          <div class="line"></div>
+
+          <p>
+            En Omniverse, Ben posee el nuevo Omnitrix y trabaja junto a Rook
+            Blonko para mantener el equilibrio entre la Tierra y el resto del
+            universo. Aunque recupera parte de su personalidad divertida y
+            despreocupada, también demuestra toda la experiencia adquirida
+            durante años de batallas. Gracias a una enorme variedad de
+            alienígenas, continúa enfrentando amenazas de escala galáctica.
+          </p>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
