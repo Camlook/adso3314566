@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-Comments</title>
+    <link rel="stylesheet" href="../src/css/js.css">
+</head>
+
+<body>
+    <div class="bg-tunnel-container">
+        <div class="scene">
+            <div class="wrapper">
+                <div class="tunnel"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/04-js/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path
+                d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+            </path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>02-Comments</h1> <br>
+            <h2>Add comments to explain or annotate your code.</h2>
+        </header>
+        <section>
+            <h3>Digital Time</h3>
+            <h2 id="time">00:00:00</h2>
+        </section>
+    </main>
+    <script>
+        //This is a time comment
+        const time = document.getElementById('time');
+
+        //Add some styles
+        time.style.textAlign = 'center';
+        time.style.zoom = '3.4'
+
+        /*
+            This is a Block comment.
+            Its used to multiple lines of code.
+            Or inactive large positions of code.
+        */
+
+        //Function to update the time
+        setInterval(function(){
+            let today = new Date; //New date
+            let hours = today.getHours(); //Get hours
+            let minutes = today.getMinutes(); //Get minutes
+            let seconds = today.getSeconds(); //Get seconds
+
+            time.textContent = `${hours}:${minutes}:${seconds}`;
+        },1000) //1 second = 1000 miliseconds
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tunnel = document.querySelector('.tunnel');
+            for (let s = 0; s < 4; s++) {
+                const side = document.createElement('div');
+                side.className = 'side';
+                for (let st = 0; st < 20; st++) {
+                    const stroke = document.createElement('div');
+                    stroke.className = 'stroke';
+                    for (let sq = 0; sq < 10; sq++) {
+                        const square = document.createElement('div');
+                        square.className = 'square';
+                        stroke.appendChild(square);
+                    }
+                    side.appendChild(stroke);
+                }
+                tunnel.appendChild(side);
+            }
+            const side5 = document.createElement('div'); side5.className = 'side'; tunnel.appendChild(side5);
+            const hl1 = document.createElement('div'); hl1.className = 'side highlight'; tunnel.appendChild(hl1);
+            const hl2 = document.createElement('div'); hl2.className = 'side highlight'; tunnel.appendChild(hl2);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45-challenge-grid</title>
+
+    <link rel="stylesheet" href="../src/css/css.css">
+
+    <style>
+        section.gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                150px 150px 150px;
+
+            grid-template-rows:
+                170px 170px 120px;
+
+
+            grid-template-areas:
+
+                "one two three"
+                "four two five"
+                "six six seven";
+
+
+            gap: 8px;
+
+
+            width: max-content;
+
+            max-width: 100%;
+
+            margin: 2rem auto;
+
+
+            padding: 0;
+
+
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+
+        }
+
+
+
+        section.gallery:hover {
+
+            transform: none;
+            box-shadow: none;
+
+        }
+
+
+
+        .item {
+
+            overflow: hidden;
+
+        }
+
+
+
+        .item img {
+
+            all: unset;
+
+            display: block;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+
+        /* Ajuste de imagen inferior */
+
+        .six img {
+
+            object-position: center 20%;
+
+        }
+
+
+        .seven img {
+
+            object-position: center 20%;
+
+        }
+
+
+
+        .item:hover {
+
+            transform: scale(1.02);
+
+            transition: .3s ease;
+
+        }
+
+
+
+        .one {
+            grid-area: one;
+        }
+
+
+        .two {
+            grid-area: two;
+        }
+
+
+        .three {
+            grid-area: three;
+        }
+
+
+        .four {
+            grid-area: four;
+        }
+
+
+        .five {
+            grid-area: five;
+        }
+
+
+        .six {
+            grid-area: six;
+        }
+
+
+        .seven {
+            grid-area: seven;
+        }
+
+
+
+        /* Tablet */
+
+        @media(max-width:850px) {
+
+            section.gallery {
+
+
+                grid-template-columns:
+                    130px 130px 130px;
+
+
+                grid-template-rows:
+                    150px 150px 110px;
+
+
+            }
+
+        }
+
+
+
+        /* Pantallas pequeñas */
+
+        @media(max-width:650px) {
+
+            section.gallery {
+
+
+                grid-template-columns:
+                    1fr 1fr;
+
+
+                grid-template-rows: auto;
+
+
+                width: 90%;
+
+
+                margin: auto;
+
+
+                grid-template-areas:
+
+
+                    "one two"
+                    "four two"
+                    "three five"
+                    "six seven";
+
+
+            }
+
+        }
+
+
+
+        /* Móvil */
+
+        @media(max-width:450px) {
+
+            section.gallery {
+
+
+                grid-template-columns: 1fr;
+
+
+                width: 300px;
+
+
+                grid-template-areas:
+
+
+                    "one"
+                    "two"
+                    "three"
+                    "four"
+                    "five"
+                    "six"
+                    "seven";
+
+
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <a href="/03-css/index.html" class="btn-home">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+
+            <path
+                d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z" />
+
+        </svg>
+
+    </a>
+
+
+    <main>
+
+
+        <header>
+
+            <h1>45-challenge-grid</h1>
+
+            <br>
+
+            <h2>Irregular gallery</h2>
+
+        </header>
+
+
+
+        <section class="gallery">
+
+
+            <div class="item one">
+                <img src="imgs/gf1.jpg" alt="">
+            </div>
+
+
+            <div class="item two">
+                <img src="imgs/gf2.jpg" alt="">
+            </div>
+
+
+            <div class="item three">
+                <img src="imgs/gf3.webp" alt="">
+            </div>
+
+
+            <div class="item four">
+                <img src="imgs/gf4.jpg" alt="">
+            </div>
+
+
+            <div class="item five">
+                <img src="imgs/gf5.jpg" alt="">
+            </div>
+
+
+            <div class="item six">
+                <img src="imgs/gf6.jpg" alt="">
+            </div>
+
+
+            <div class="item seven">
+                <img src="imgs/gf7.jpg" alt="">
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>
