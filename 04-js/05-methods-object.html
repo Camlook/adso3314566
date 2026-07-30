@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-Methods Object</title>
+    <link rel="stylesheet" href="../src/css/js.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+        main section h3.pk-name {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        main section h4 {
+            background-color: #fff9;
+            color: #0009;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.6rem;
+            margin: 0 auto;
+            padding: 0.4rem 1rem;
+            width: fit-content;
+        }
+
+        main section figure {
+            background-repeat: no-repeat;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 192px;
+            width: 202px;
+        }
+
+        main section figure.alive {
+            background-position-x: 0px;
+        }
+
+        main section figure.attack {
+            background-position-x: -202px;
+        }
+
+        main section figure.feed {
+            background-position-x: -404px;
+        }
+
+        main section figure.dead {
+            background-position-x: -608px;
+        }
+
+        main section div.actions {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            width: 150px;
+
+            button {
+                background: #fff9;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                padding: 0.4rem 1rem;
+                transition: transform 0.2s ease-in;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <div class="bg-tunnel-container">
+        <div class="scene">
+            <div class="wrapper">
+                <div class="tunnel"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/04-js/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+            <path
+                d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+            </path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>00-Title</h1> <br>
+            <h2>Description</h2>
+        </header>
+        <section>
+            <h3 class="pk-name"></h3>
+            <h4 class="pk-hp"></h4>
+            <figure class="pk-image animate__animated"></figure>
+            <div class="actions">
+                <button class="btn-attack">Attack</button>
+                <button class="btn-feed">Feed</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        //Methods
+        const pkName = document.querySelector('.pk-name')
+        const pkHp = document.querySelector('.pk-hp')
+        const pkImage = document.querySelector('.pk-image')
+        //Buttons
+        const btnAttack = document.querySelector('.btn-attack')
+        const btnFeed = document.querySelector('.btn-feed')
+        //Object
+        const pokemon ={
+            //Attributes
+            name: 'Snorlax',
+            type: 'Normal',
+            hp: 100,
+            image: 'imgs/snorlax-sprite.png',
+            status: 'alive', //alive, dead, attack, feed
+        
+            //Methods
+            render: function(){
+                pkName.innerHTML = `${this.name} <small>[${this.type}]</small>`;
+                pkImage.style.backgroundImage=`url(${this.image})`;
+                this.updateHp('animate__rubberBand');
+            },
+            updateHp: function(fx){
+                pkHp.innerHTML = `HP: ${this.hp}`;
+
+                pkImage.classList.add(`${this.status}`, fx);
+            },
+            feed: function() {
+                if(this.hp < 200){
+                    this.hp +=25;
+                    this.status = 'feed';
+                    pkImage.classList.remove('alive', 'attack', 'dead');
+                    this.updateHp('animate__rubberBand');
+                    this.updateStatus();
+                };
+            },
+            attack: function(){
+                if(this.hp > 0) {
+                    this.hp -=25;
+                    this.status = 'attack';
+                    pkImage.classList.remove('alive', 'feed','dead');
+                    this.updateHp('animate__rubberBand');
+                    this.updateStatus();
+                }
+            },
+            updateStatus: function() {
+                setTimeout(() => {
+                    pkImage.classicList.remove('animate__rubberBand');
+                }, 1200);
+            }
+        };
+        pokemon.render()
+
+        //Events
+        btnFeed.addEventListener('click', function(){
+            pokemon.feed();
+            this.style.pointerEvents = 'none'
+            this.style.opacity = '0.2'
+            setTimeout(() => {
+                btnFeed.style.pointerEvents = 'all'
+                btnFeed.style.opacity = '1'
+            }, 1200);
+        })
+        btnAttack.addEventListener('click', function(){
+            pokemon.attack();
+        })
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tunnel = document.querySelector('.tunnel');
+            for (let s = 0; s < 4; s++) {
+                const side = document.createElement('div');
+                side.className = 'side';
+                for (let st = 0; st < 20; st++) {
+                    const stroke = document.createElement('div');
+                    stroke.className = 'stroke';
+                    for (let sq = 0; sq < 10; sq++) {
+                        const square = document.createElement('div');
+                        square.className = 'square';
+                        stroke.appendChild(square);
+                    }
+                    side.appendChild(stroke);
+                }
+                tunnel.appendChild(side);
+            }
+            const side5 = document.createElement('div'); side5.className = 'side'; tunnel.appendChild(side5);
+            const hl1 = document.createElement('div'); hl1.className = 'side highlight'; tunnel.appendChild(hl1);
+            const hl2 = document.createElement('div'); hl2.className = 'side highlight'; tunnel.appendChild(hl2);
+        });
+    </script>
+</body>
+
+</html>
