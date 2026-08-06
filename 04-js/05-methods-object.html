@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>05-Methods Object</title>
-    <link rel="stylesheet" href="../src/css/js.css">
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="../src/css/js.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
     <style>
         main section h3.pk-name {
             font-size: 2rem;
@@ -40,15 +40,15 @@
         }
 
         main section figure.attack {
-            background-position-x: -202px;
+            background-position-x: -206px;
         }
 
         main section figure.feed {
-            background-position-x: -404px;
+            background-position-x: -412px;
         }
 
         main section figure.dead {
-            background-position-x: -608px;
+            background-position-x: -616px;
         }
 
         main section div.actions {
@@ -70,10 +70,188 @@
                 &:hover {
                     transform: scale(1.2);
                 }
+
+                &:disabled {
+                    opacity: 0.4;
+                    pointer-events: none;
+                    transform: scale(0.95);
+                }
             }
         }
+
+        main section figure {
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: auto;
+            overflow: hidden;
+        }
+
+        /* Clases de animación personalizadas */
+        @keyframes customBounceIn {
+            0% {
+                transform: scale(0.2) rotate(-5deg);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.1) rotate(2deg);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(0.9) rotate(-1deg);
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes customRubberBand {
+            0% {
+                transform: scale(1);
+            }
+            30% {
+                transform: scale(1.2, 0.8);
+            }
+            40% {
+                transform: scale(0.8, 1.2);
+            }
+            50% {
+                transform: scale(1.1, 0.9);
+            }
+            65% {
+                transform: scale(0.95, 1.05);
+            }
+            75% {
+                transform: scale(1.02, 0.98);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes customHeadShake {
+            0% {
+                transform: translateX(0) rotate(0deg) scale(1);
+            }
+            15% {
+                transform: translateX(-15px) rotate(-8deg) scale(1.05);
+            }
+            30% {
+                transform: translateX(12px) rotate(6deg) scale(0.95);
+            }
+            45% {
+                transform: translateX(-10px) rotate(-5deg) scale(1.03);
+            }
+            60% {
+                transform: translateX(8px) rotate(4deg) scale(0.97);
+            }
+            80% {
+                transform: translateX(-4px) rotate(-2deg) scale(1.01);
+            }
+            100% {
+                transform: translateX(0) rotate(0deg) scale(1);
+            }
+        }
+
+        @keyframes customDeath {
+            0% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            20% {
+                transform: scale(1.1) rotate(-3deg);
+                opacity: 1;
+            }
+            40% {
+                transform: scale(0.9) rotate(5deg);
+                opacity: 0.9;
+            }
+            60% {
+                transform: scale(0.7) rotate(-5deg);
+                opacity: 0.8;
+            }
+            80% {
+                transform: scale(0.5) rotate(3deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(0.3) rotate(0deg);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes customRevive {
+            0% {
+                transform: scale(0.3) rotate(5deg);
+                opacity: 0.6;
+                filter: grayscale(1) brightness(2);
+            }
+            30% {
+                transform: scale(0.5) rotate(-3deg);
+                opacity: 0.7;
+                filter: grayscale(0.7) brightness(1.5);
+            }
+            60% {
+                transform: scale(0.9) rotate(2deg);
+                opacity: 0.9;
+                filter: grayscale(0.3) brightness(1.1);
+            }
+            80% {
+                transform: scale(1.05) rotate(-1deg);
+                opacity: 1;
+                filter: grayscale(0);
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+                filter: grayscale(0);
+            }
+        }
+
+        @keyframes customPulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pk-image.animate-bounce-in {
+            animation: customBounceIn 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+        }
+
+        .pk-image.animate-rubber-band {
+            animation: customRubberBand 0.8s ease forwards;
+        }
+
+        .pk-image.animate-head-shake {
+            animation: customHeadShake 0.8s ease forwards;
+        }
+
+        .pk-image.animate-death {
+            animation: customDeath 1s ease-in forwards;
+        }
+
+        .pk-image.animate-revive {
+            animation: customRevive 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+        }
+
+        .pk-image.animate-pulse {
+            animation: customPulse 0.4s ease forwards;
+        }
+
+        /* Estado de muerte - se queda visible */
+        .pk-image.dead {
+            filter: grayscale(0.7) brightness(0.5);
+            transition: filter 0.3s ease;
+            opacity: 0.6 !important;
+            transform: scale(0.3) !important;
+        }
     </style>
-</head>
 </head>
 
 <body>
@@ -95,108 +273,231 @@
 
     <main>
         <header>
-            <h1>00-Title</h1> <br>
-            <h2>Description</h2>
+            <h1>05-Methods Object</h1> <br />
+            <h2>Use methods to interact with objects.</h2>
         </header>
         <section>
             <h3 class="pk-name"></h3>
             <h4 class="pk-hp"></h4>
-            <figure class="pk-image animate__animated"></figure>
+            <figure class="pk-image"></figure>
             <div class="actions">
-                <button class="btn-attack">Attack</button>
-                <button class="btn-feed">Feed</button>
+                <button class="btn-attack">⚔️ Attack</button>
+                <button class="btn-feed">🍖 Feed</button>
             </div>
         </section>
     </main>
     <script>
-        //Methods
-        const pkName = document.querySelector('.pk-name')
-        const pkHp = document.querySelector('.pk-hp')
-        const pkImage = document.querySelector('.pk-image')
-        //Buttons
-        const btnAttack = document.querySelector('.btn-attack')
-        const btnFeed = document.querySelector('.btn-feed')
-        //Object
-        const pokemon ={
-            //Attributes
-            name: 'Snorlax',
-            type: 'Normal',
-            hp: 100,
-            image: 'imgs/snorlax-sprite.png',
-            status: 'alive', //alive, dead, attack, feed
-        
-            //Methods
-            render: function(){
-                pkName.innerHTML = `${this.name} <small>[${this.type}]</small>`;
-                pkImage.style.backgroundImage=`url(${this.image})`;
-                this.updateHp('animate__rubberBand');
-            },
-            updateHp: function(fx){
-                pkHp.innerHTML = `HP: ${this.hp}`;
+        // Métodos
+        const pkName = document.querySelector(".pk-name");
+        const pkHp = document.querySelector(".pk-hp");
+        const pkImage = document.querySelector(".pk-image");
 
-                pkImage.classList.add(`${this.status}`, fx);
+        // Botones
+        const btnAttack = document.querySelector(".btn-attack");
+        const btnFeed = document.querySelector(".btn-feed");
+
+        // Objeto
+        const pokemon = {
+            // Atributos
+            name: "Snorlax",
+            type: "Normal",
+            hp: 100,
+            maxHp: 200,
+            image: "imgs/snorlax-sprite.png",
+            status: "alive",
+            isAnimating: false,
+
+            // Mostrar Pokémon
+            render: function () {
+                pkName.innerHTML = `${this.name} <small>[${this.type}]</small>`;
+                pkImage.style.backgroundImage = `url(${this.image})`;
+                this.updateHp();
+                this.playAnimation("animate-bounce-in");
             },
-            feed: function() {
-                if(this.hp < 200){
-                    this.hp +=25;
-                    this.status = 'feed';
-                    pkImage.classList.remove('alive', 'attack', 'dead');
-                    this.updateHp('animate__rubberBand');
-                    this.updateStatus();
-                };
+
+            // Actualizar HP y sprite
+            updateHp: function () {
+                pkHp.innerHTML = `HP: ${this.hp} / ${this.maxHp}`;
+                pkImage.classList.remove("alive", "attack", "feed", "dead");
+                pkImage.classList.add(this.status);
             },
-            attack: function(){
-                if(this.hp > 0) {
-                    this.hp -=25;
-                    this.status = 'attack';
-                    pkImage.classList.remove('alive', 'feed','dead');
-                    this.updateHp('animate__rubberBand');
-                    this.updateStatus();
+
+            // Reproducir animación
+            playAnimation: function (animationClass) {
+                // Remover todas las animaciones anteriores
+                pkImage.classList.remove(
+                    "animate-bounce-in",
+                    "animate-rubber-band",
+                    "animate-head-shake",
+                    "animate-death",
+                    "animate-revive",
+                    "animate-pulse"
+                );
+
+                // Forzar reflow
+                void pkImage.offsetWidth;
+
+                // Agregar nueva animación
+                pkImage.classList.add(animationClass);
+            },
+
+            // Alimentar
+            feed: function () {
+                if (this.isAnimating) return;
+
+                // REVIVIR
+                if (this.status === "dead") {
+                    this.isAnimating = true;
+                    this.hp = 50;
+                    this.status = "alive"; // Cambio: estado alive, no feed
+
+                    // Activar botones
+                    btnAttack.disabled = false;
+                    btnFeed.disabled = false;
+
+                    this.updateHp();
+                    this.playAnimation("animate-revive");
+
+                    // Limpiar filtros después de la animación
+                    setTimeout(() => {
+                        if (this.status === "alive") {
+                            this.updateHp();
+                            this.playAnimation("animate-pulse");
+                        }
+                        this.isAnimating = false;
+                    }, 1000);
+
+                    return;
+                }
+
+                // ALIMENTAR NORMALMENTE
+                if (this.hp < this.maxHp) {
+                    this.isAnimating = true;
+                    this.hp = Math.min(this.hp + 25, this.maxHp);
+                    this.status = "feed";
+
+                    this.updateHp();
+                    this.playAnimation("animate-rubber-band");
+
+                    setTimeout(() => {
+                        if (this.status !== "dead") {
+                            this.status = "alive";
+                            this.updateHp();
+                        }
+                        this.isAnimating = false;
+                    }, 800);
                 }
             },
-            updateStatus: function() {
-                setTimeout(() => {
-                    pkImage.classicList.remove('animate__rubberBand');
-                }, 1200);
-            }
-        };
-        pokemon.render()
 
-        //Events
-        btnFeed.addEventListener('click', function(){
+            // Atacar
+            attack: function () {
+                if (this.isAnimating) return;
+                if (this.status === "dead") return;
+
+                this.isAnimating = true;
+                this.hp -= 25;
+
+                if (this.hp <= 0) {
+                    this.hp = 0;
+                    this.status = "dead";
+
+                    this.updateHp();
+                    this.playAnimation("animate-death");
+
+                    // Bloquear ataque, permitir revivir
+                    btnAttack.disabled = true;
+                    btnFeed.disabled = false;
+
+                    // Aplicar estilo de muerte
+                    setTimeout(() => {
+                        // Mantener el estado dead con su estilo
+                        this.isAnimating = false;
+                    }, 1000);
+
+                    return;
+                }
+
+                this.status = "attack";
+                this.updateHp();
+                this.playAnimation("animate-head-shake");
+
+                setTimeout(() => {
+                    if (this.status !== "dead") {
+                        this.status = "alive";
+                        this.updateHp();
+                        this.playAnimation("animate-pulse");
+                    }
+                    this.isAnimating = false;
+                }, 800);
+            },
+        };
+
+        // Mostrar Pokémon
+        pokemon.render();
+
+        // Eventos
+        btnFeed.addEventListener("click", function () {
+            this.disabled = true;
             pokemon.feed();
-            this.style.pointerEvents = 'none'
-            this.style.opacity = '0.2'
+
             setTimeout(() => {
-                btnFeed.style.pointerEvents = 'all'
-                btnFeed.style.opacity = '1'
-            }, 1200);
-        })
-        btnAttack.addEventListener('click', function(){
+                if (pokemon.status !== "dead" && !pokemon.isAnimating) {
+                    this.disabled = false;
+                }
+            }, 1000);
+        });
+
+        btnAttack.addEventListener("click", function () {
+            this.disabled = true;
             pokemon.attack();
-        })
+
+            setTimeout(() => {
+                if (pokemon.status !== "dead" && !pokemon.isAnimating) {
+                    this.disabled = false;
+                }
+            }, 1000);
+        });
+
+        // Habilitar botones después de animaciones largas
+        setInterval(() => {
+            if (!pokemon.isAnimating) {
+                if (pokemon.status !== "dead") {
+                    btnAttack.disabled = false;
+                    btnFeed.disabled = false;
+                } else {
+                    btnAttack.disabled = true;
+                    btnFeed.disabled = false;
+                }
+            }
+        }, 500);
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const tunnel = document.querySelector('.tunnel');
+            const tunnel = document.querySelector(".tunnel");
             for (let s = 0; s < 4; s++) {
-                const side = document.createElement('div');
-                side.className = 'side';
+                const side = document.createElement("div");
+                side.className = "side";
                 for (let st = 0; st < 20; st++) {
-                    const stroke = document.createElement('div');
-                    stroke.className = 'stroke';
+                    const stroke = document.createElement("div");
+                    stroke.className = "stroke";
                     for (let sq = 0; sq < 10; sq++) {
-                        const square = document.createElement('div');
-                        square.className = 'square';
+                        const square = document.createElement("div");
+                        square.className = "square";
                         stroke.appendChild(square);
                     }
                     side.appendChild(stroke);
                 }
                 tunnel.appendChild(side);
             }
-            const side5 = document.createElement('div'); side5.className = 'side'; tunnel.appendChild(side5);
-            const hl1 = document.createElement('div'); hl1.className = 'side highlight'; tunnel.appendChild(hl1);
-            const hl2 = document.createElement('div'); hl2.className = 'side highlight'; tunnel.appendChild(hl2);
+            const side5 = document.createElement("div");
+            side5.className = "side";
+            tunnel.appendChild(side5);
+            const hl1 = document.createElement("div");
+            hl1.className = "side highlight";
+            tunnel.appendChild(hl1);
+            const hl2 = document.createElement("div");
+            hl2.className = "side highlight";
+            tunnel.appendChild(hl2);
         });
     </script>
 </body>

@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01-Write Js</title>
+    <title>06-Type Objects</title>
     <link rel="stylesheet" href="../src/css/js.css">
+    <style>
+        ul {
+            margin: 0;
+            padding-left: 0;
+            list-style-position: inside;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,35 +34,42 @@
 
     <main>
         <header>
-            <h1>01-Write-Js</h1> <br>
-            <h2>Learn to write and execute basic JavaScript code.</h2>
+            <h1>06-Type Objects</h1> <br>
+            <h2>Understand and work with different object types.</h2>
         </header>
         <section>
-            <script>
-                document.write("<h3>Welcome to JS</h3>");
-            </script>
-            <p id="message"></p>
+            <ul class="objects"></ul>
         </section>
     </main>
     <script>
-        const message = document.getElementById('message');
-        const string = 'Amazing'
-        message.innerHTML = "<strong><h2>We love </h2></strong>"
-        message.innerText += ' Javascript';
-        message.textContent += ` is ${string} 💛`;
+        // Elements
+        const objs = document.querySelector('.objects')
 
-        //Write in console
-        console.clear();
-        console.log('This is a console message!')
-        console.log('2**4=' + 2 ** 4)
+        // Object string
+        const string = new String('Javascript 💛');
+        objs.innerHTML = `<li>${string} ➪ Object: 
+                          ${string.constructor.name} </li>`
 
-        const aliens = [
-            ['Heatblast', 'Original series'],
-            ['Feedback', 'Omniverse'],
-            ['Swampfire', 'Alien force'],
-            ['Ultimate Echo Echo', 'Ultimate alien'],
-        ]
-        console.log (aliens);
+        const number = new Number(256);
+        objs.innerHTML += `<li> ${number} ➪ Object: 
+                            ${number.constructor.name} </li>`
+
+        const bool = new Boolean(512 > 128);
+        objs.innerHTML += `<li> ${bool} ➪ Object: 
+                           ${bool.constructor.name} </li>`
+
+        const arr = new Array('👽', '🚀', '🌒', '👨‍🚀', '🛰️');
+        objs.innerHTML += `<li> ${arr} ➪ Object: 
+                           ${arr.constructor.name} </li>`
+
+        const dt = new Date('12/12/2026');
+        objs.innerHTML += `<li> ${dt.getFullYear()} ➪ Object: 
+                           ${dt.constructor.name} </li>`
+
+        const obj = new Object('Vehicle');
+        objs.innerHTML += `<li> ${obj} ➪ Object: 
+                           ${obj.constructor.name} </li>`
+
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
