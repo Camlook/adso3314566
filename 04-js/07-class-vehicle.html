@@ -13,6 +13,81 @@
             align-items: center;
             width: 100%;
         }
+            div.vehicle {
+                &.dark {
+                    background-color: black;
+
+                    header {
+                        figure.logo {
+                            background: url(imgs/logod.png) no-repeat center / 95%;
+                        }
+
+                        button.mode {
+                            background: url(imgs/mode-light.svg) no-repeat center / cover;
+                            height: 60px;
+                            width: 90px;
+                        }
+                    }
+
+                    nav {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 20px;
+
+                        button {
+                            border: none;
+                            cursor: pointer;
+                            height: 60px;
+                            transition: transform 0.4s ease-in;
+                            width: 60px;
+
+                            &.prev {
+                                background: url(imgs/prevd.svg) no-repeat center / contain;
+                            }
+
+                            &.next {
+                                background: url(imgs/nextd.svg) no-repeat center / contain;
+                            }
+                        }
+                    }
+                }
+
+                border-radius: 8px;
+                background-color: rgb(253, 253, 253);
+                height: 600px;
+                width: 380px;
+                margin: 0 auto;
+            }
+
+            header {
+                figure {
+                    background: url(imgs/logow.png) no-repeat center / cover;
+                    height: 81px;
+                    width: 243px;
+                    margin: 0;
+                }
+            }
+
+            button.mode {
+                background: url(imgs/mode-dark.svg) no-repeat center / cover;
+                height: 60px;
+                width: 90px;
+                transition: transform 0.2s ease-in;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
+
+            div.vehicle>header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 12px;
+            }
     </style>
 </head>
 
@@ -39,11 +114,37 @@
             <h2>Create and manipulate a vehicle object with properties.</h2>
         </header>
         <section>
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
-                src="https://embed.figma.com/design/SaDpNhz1M9qqsiijbZbqia/JS-Class-Vehicle?node-id=0-1&embed-host=share"
-                allowfullscreen></iframe>
+            <div class="vehicle">
+                <header>
+                    <figure class="logo"></figure>
+                    <button class="mode"></button>
+                </header>
+
+                <nav>
+                    <button class="prev"></button>
+                    <button class="brand"></button>
+                    <button class="next"></button>
+                </nav>
+            </div>
         </section>
+
     </main>
+    <script>
+        const vhc = window.matchMedia('(prefers-color-scheme: dark)');
+        const vehicle = document.querySelector('.vehicle');
+        const mode = document.querySelector('.mode');
+
+        const updateTheme = (e) => {
+            vehicle.classList.toggle('dark', e.matches);
+        };
+
+        vhc.addEventListener('change', updateTheme);
+        updateTheme(vhc);
+
+        mode.addEventListener('click', function () {
+            vehicle.classList.toggle('dark');
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const tunnel = document.querySelector('.tunnel');
