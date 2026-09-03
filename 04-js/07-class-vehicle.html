@@ -13,81 +13,202 @@
             align-items: center;
             width: 100%;
         }
-            div.vehicle {
-                &.dark {
-                    background-color: black;
 
-                    header {
-                        figure.logo {
-                            background: url(imgs/logod.png) no-repeat center / 95%;
-                        }
+        div.vehicle {
+            &.dark {
+                background-color: black;
 
-                        button.mode {
-                            background: url(imgs/mode-light.svg) no-repeat center / cover;
-                            height: 60px;
-                            width: 90px;
-                        }
+                header {
+                    figure.logo {
+                        background: url(imgs/logod.png) no-repeat center / 95%;
                     }
 
-                    nav {
+                    button.mode {
+                        background: url(imgs/mode-light.svg) no-repeat center / cover;
+                        height: 60px;
+                        width: 90px;
+                    }
+                }
+
+                nav {
+                    display: grid;
+                    grid-template-columns: 70px 202px 70px;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 15px;
+                    margin-top: 20px;
+
+                    button {
+                        border: none;
+                        cursor: pointer;
+                        height: 60px;
+                        padding: 0;
+                        transition: transform 0.2s ease-in;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
+
+                        &.prev {
+                            width: 70px;
+                            background: url(imgs/prevd.svg) no-repeat center / contain;
+                        }
+
+                        &.brand {
+                            color: white;
+                            width: 202px;
+                            background: url(imgs/brandd.svg) no-repeat center / contain;
+                        }
+
+                        &.next {
+                            width: 70px;
+                            background: url(imgs/nextd.svg) no-repeat center / contain;
+                        }
+                    }
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    margin-top: 16px;
+
+                    figure {
+                        margin: 0;
+                        padding: 0;
                         display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 20px;
+                        justify-content: center;
+                        align-items: end;
+                        padding-bottom: 15px;
+                        height: 90px;
+                        width: 110px;
 
-                        button {
-                            border: none;
-                            cursor: pointer;
-                            height: 60px;
-                            transition: transform 0.4s ease-in;
-                            width: 60px;
+                        &.model {
+                            background: url(imgs/modeld.svg) no-repeat center;
+                        }
 
-                            &.prev {
-                                background: url(imgs/prevd.svg) no-repeat center / contain;
-                            }
+                        &.refer {
+                            background: url(imgs/referd.svg) no-repeat center;
+                        }
 
-                            &.next {
-                                background: url(imgs/nextd.svg) no-repeat center / contain;
-                            }
+                        &.color {
+                            background: url(imgs/colord.svg) no-repeat center;
                         }
                     }
                 }
 
-                border-radius: 8px;
-                background-color: rgb(253, 253, 253);
-                height: 600px;
-                width: 380px;
-                margin: 0 auto;
-            }
-
-            header {
-                figure {
-                    background: url(imgs/logow.png) no-repeat center / cover;
-                    height: 81px;
-                    width: 243px;
-                    margin: 0;
+                figure.bg {
+                    background: url(imgs/backgrounddark.svg);
+                    display: flex;
+                    margin: 0 auto;
+                    width: 360px;
+                    height: 240px;
+                    figure.sp01 {
+                        background: url(imgs/sp01.png);
+                        width: 187px;
+                        height: 55px;
+                        display: flex;
+                        margin: 0 auto;
+                        margin-bottom: 70px;
+                    }
                 }
-            }
-
-            button.mode {
-                background: url(imgs/mode-dark.svg) no-repeat center / cover;
-                height: 60px;
-                width: 90px;
-                transition: transform 0.2s ease-in;
-                border: none;
-                cursor: pointer;
-
-                &:hover {
-                    transform: scale(1.02);
+                .vehicle>div {
+                    display: grid;
+                    grid-template-columns: 110px 110px 110px;
+                    justify-content: center;
+                    gap: 10px;
+                    margin-top: 20px;
                 }
+
             }
 
-            div.vehicle>header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 12px;
+
+
+            border-radius: 8px;
+            background-color: rgb(253, 253, 253);
+            height: 600px;
+            width: 380px;
+            margin: 0 auto;
+        }
+
+        header {
+            figure {
+                background: url(imgs/logow.png) no-repeat center / cover;
+                height: 81px;
+                width: 243px;
+                margin: 0;
             }
+        }
+
+        button.mode {
+            background: url(imgs/mode-dark.svg) no-repeat center / cover;
+            height: 60px;
+            width: 90px;
+            transition: transform 0.2s ease-in;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: 70px 202px 70px;
+            justify-content: center;
+            align-items: center;
+            column-gap: 15px;
+            margin-top: 20px;
+        }
+
+        button.prev {
+            width: 70px;
+            height: 60px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            background: url(imgs/prev.svg) no-repeat center / contain;
+        }
+
+        button.brand {
+            width: 202px;
+            height: 60px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            background: url(imgs/brand.svg) no-repeat center / contain;
+        }
+
+        button.next {
+            width: 70px;
+            height: 60px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            background: url(imgs/next.svg) no-repeat center / contain;
+        }
+
+        figure.model {
+            background: url(imgs/model.svg) no-repeat center / contain;
+        }
+
+        figure.refer {
+            background: url(imgs/refer.svg) no-repeat center / contain;
+        }
+
+        figure.color {
+            background: url(imgs/color.svg) no-repeat center / contain;
+        }
+
+
+        div.vehicle>header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+        }
     </style>
 </head>
 
@@ -125,6 +246,16 @@
                     <button class="brand"></button>
                     <button class="next"></button>
                 </nav>
+                <div>
+                    <figure class="model"></figure>
+                    <figure class="refer"></figure>
+                    <figure class="color"></figure>
+                </div>
+                <div>
+                    <figure class="bg">
+                        <figure class="sp01"></figure>
+                    </figure>
+                </div>
             </div>
         </section>
 
@@ -134,6 +265,21 @@
         const vhc = window.matchMedia('(prefers-color-scheme: dark)');
         const vehicle = document.querySelector('.vehicle');
         const mode = document.querySelector('.mode');
+
+
+
+        //Labels Attributes
+        const lbrand = document.querySelector('.brand');
+        const lmodel = document.querySelector('.model');
+        const lrefer = document.querySelector('.refer');
+        const lcolor = document.querySelector('.color');
+
+        //Buttons
+        const bnext = document.querySelector('.next');
+        const bprev = document.querySelector('.prev');
+
+
+        let ix = 0;
 
         const updateTheme = (e) => {
             vehicle.classList.toggle('dark', e.matches);
@@ -145,6 +291,79 @@
         mode.addEventListener('click', function () {
             vehicle.classList.toggle('dark');
         });
+
+        bnext.addEventListener('click', function () {
+            if (ix < (vehicles.attrs.length - 1)) {
+                car.brand = vehicles.attrs[++ix].brand;
+                car.model = vehicles.attrs[ix].model;
+                car.refer = vehicles.attrs[ix].refer;
+                car.color = vehicles.attrs[ix].color;
+                car.displayData();
+                car.enableButton(bprev);
+            }
+            if (ix === vehicles.attrs.length - 1) {
+                car.disableButton(bnext);
+            }
+
+        });
+
+        bprev.addEventListener('click', function () {
+            if (ix > 0) {
+                car.brand = vehicles.attrs[--ix].brand;
+                car.model = vehicles.attrs[ix].model;
+                car.refer = vehicles.attrs[ix].refer;
+                car.color = vehicles.attrs[ix].color;
+                car.displayData();
+                car.enableButton(bnext);
+            }
+            if (ix === 0) {
+                car.disableButton(bprev);
+            }
+        });
+
+
+        // Object 
+        const vehicles = {
+            attrs: [
+                { brand: 'Sp01', refer: 'Space Ship X', model: '2060', color: 'White/Red', image: 'images/sp01.png' },
+                { brand: 'Sp02', refer: 'Spacex Tesla 60', model: '2056', color: 'Black', image: 'images/sp02.png' },
+                { brand: 'Sp03', refer: 'Space Italic X', model: '2069', color: 'Black', image: 'images/sp03.png' },
+                { brand: 'Sp04', refer: 'Spa', model: '2070', color: 'Black', image: 'images/sp04.png' },
+            ]
+        };
+
+        // Class
+        class Vehicle {
+            constructor(brand, refer, model, color, image) {
+                this.brand = brand;
+                this.refer = refer;
+                this.model = model;
+                this.color = color;
+                this.image = image;
+                this.displayData();
+                this.disableButton(bprev);
+            }
+            disableButton(btn) {
+                btn.style.pointerEvents = 'none';
+                btn.style.opacity = '0.2';
+            }
+            enableButton(btn) {
+                btn.style.pointerEvents = 'auto';
+                btn.style.opacity = '1';
+            }
+            displayData() {
+                lbrand.textContent = this.brand;
+                lmodel.textContent = this.model;
+                lrefer.textContent = this.refer;
+                lcolor.textContent = this.color;
+            }
+        }
+        car = new Vehicle(vehicles.attrs[ix].brand,
+            vehicles.attrs[ix].refer,
+            vehicles.attrs[ix].model,
+            vehicles.attrs[ix].color,
+            vehicles.attrs[ix].image,
+        );
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
