@@ -99,19 +99,18 @@
                 }
 
                 figure.bg {
-                    background: url(imgs/backgrounddark.svg);
                     display: flex;
                     margin: 0 auto;
                     width: 360px;
                     height: 240px;
 
                     figure.sp01 {
-                        background: url(imgs/sp01.png);
-                        width: 187px;
-                        height: 55px;
+                        background: url(imgs/sp01.png) no-repeat center / contain;
+                        width: 150px;
+                        height: 45px;
                         display: flex;
                         margin: 0 auto;
-                        margin-bottom: 70px;
+                        margin-bottom: 60px;
                     }
                 }
 
@@ -123,9 +122,130 @@
                     margin-top: 20px;
                 }
 
+                .parallax-container {
+                    background: #05080f;
+                    overflow: hidden;
+                }
+
+                .bgstars {
+                    background-image: url('imgs/bgdark/bgstars.png');
+                    z-index: 1;
+                    animation: loopScroll 45s linear infinite;
+                    background-size: auto 100%;
+                    background-repeat: repeat-x;
+                    background-position: 0 0;
+                }
+
+                .cloud1 {
+                    background-image: url('imgs/bgdark/cloud1.png');
+                    z-index: 2;
+                    animation: loopScroll 35s linear infinite;
+                    background-size: auto 100%;
+                    background-repeat: repeat-x;
+                    background-position: 0 0;
+                }
+
+                .cloud2 {
+                    background-image: url('imgs/bgdark/cloud2.png');
+                    z-index: 3;
+                    animation: loopScroll 28s linear infinite;
+                    background-size: auto 100%;
+                    background-repeat: repeat-x;
+                    background-position: 0 0;
+                }
+
+                .cloud3 {
+                    background-image: url('imgs/bgdark/cloud3.png');
+                    z-index: 4;
+                    animation: loopScroll 22s linear infinite;
+                    background-size: auto 100%;
+                    background-repeat: repeat-x;
+                    background-position: 0 0;
+                }
+
+                .cloud4 {
+                    background-image: url('imgs/bgdark/cloud4.png');
+                    z-index: 5;
+                    animation: loopScroll 16s linear infinite;
+                    background-size: auto 100%;
+                    background-repeat: repeat-x;
+                    background-position: 0 0;
+                }
+
+                .mountain3 {
+                    background-image: url('imgs/bgdark/mountain3.png');
+                    z-index: 6;
+                    animation: loopScroll 12s linear infinite;
+                    background-size: auto 80%;
+                    background-repeat: repeat-x;
+                    background-position: 0 bottom;
+                }
+
+                .mountain2 {
+                    background-image: url('imgs/bgdark/mountain2.png');
+                    z-index: 7;
+                    animation: loopScroll 8s linear infinite;
+                    background-size: auto 85%;
+                    background-repeat: repeat-x;
+                    background-position: 0 bottom;
+                }
+
+                .mountain1 {
+                    background-image: url('imgs/bgdark/mountain1.png');
+                    z-index: 8;
+                    animation: loopScroll 5s linear infinite;
+                    background-size: auto 90%;
+                    background-repeat: repeat-x;
+                    background-position: 0 bottom;
+                }
             }
 
+            &:not(.dark) {
+                .parallax-container {
+                    background: #87CEEB;
+                    overflow: hidden;
+                }
 
+                .bgstars {
+                    background: transparent;
+                    z-index: 1;
+                }
+
+                .cloud1 {
+                    background: transparent;
+                    z-index: 2;
+                }
+
+                .cloud2 {
+                    background: transparent;
+                    z-index: 3;
+                }
+
+                .cloud3 {
+                    background: transparent;
+                    z-index: 4;
+                }
+
+                .cloud4 {
+                    background: transparent;
+                    z-index: 5;
+                }
+
+                .mountain3 {
+                    background: transparent;
+                    z-index: 6;
+                }
+
+                .mountain2 {
+                    background: transparent;
+                    z-index: 7;
+                }
+
+                .mountain1 {
+                    background: transparent;
+                    z-index: 8;
+                }
+            }
 
             border-radius: 8px;
             background-color: rgb(253, 253, 253);
@@ -217,7 +337,6 @@
             width: 360px;
             height: 240px;
             margin: 0 auto;
-            overflow: hidden;
             border-radius: 8px;
         }
 
@@ -225,86 +344,35 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 200%;
             height: 100%;
             background-repeat: repeat-x;
-            background-size: cover;
-            background-position: 0 0;
-        }
-
-        .bgstars {
-            background-image: url('imgs/bgdark/bgstars.png');
-            z-index: 1;
-        }
-
-        .cloud1 {
-            background-image: url('imgs/bgdark/cloud1.png');
-            z-index: 2;
-            background
-            animation: loopScroll 40s linear infinite;
-        }
-
-        .cloud2 {
-            background-image: url('imgs/bgdark/cloud2.png');
-            z-index: 3;
-            animation: loopScroll 35s linear infinite;
-        }
-
-        .cloud3 {
-            background-image: url('imgs/bgdark/cloud3.png');
-            z-index: 4;
-            animation: loopScroll 30s linear infinite;
-        }
-
-        .cloud4 {
-            background-image: url('imgs/bgdark/cloud4.png');
-            z-index: 5;
-            animation: loopScroll 25s linear infinite;
-        }
-
-        .mountain1 {
-            background-image: url('imgs/bgdark/mountain1.png');
-            z-index: 6;
-            animation: loopScroll 20s linear infinite;
-        }
-
-        .mountain2 {
-            background-image: url('imgs/bgdark/mountain2.png');
-            z-index: 7;
-            animation: loopScroll 15s linear infinite;
-        }
-
-        .mountain3 {
-            background-image: url('imgs/bgdark/mountain3.png');
-            z-index: 8;
-            animation: loopScroll 10s linear infinite;
-        }
-
-        .mountain4 {
-            background-image: url('imgs/bgdark/mountain4.png');
-            z-index: 9;
-            animation: loopScroll 6s linear infinite;
         }
 
         figure.sp01 {
             position: absolute;
             z-index: 10;
             background: url('imgs/sp01.png') no-repeat center / contain;
-            width: 187px;
-            height: 55px;
+            width: 150px;
+            height: 45px;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
         }
 
         @keyframes loopScroll {
-            from {
-                background-position: 0 0;
+            0% {
+                transform: translateX(0);
             }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 
-            to {
-                background-position: -360px 0;
-            }
+        .mountain3,
+        .mountain2,
+        .mountain1 {
+            background-color: transparent;
         }
     </style>
 </head>
@@ -351,17 +419,13 @@
                 <div>
                     <figure class="bg parallax-container">
                         <div class="parallax-layer bgstars"></div>
-
                         <div class="parallax-layer cloud1"></div>
                         <div class="parallax-layer cloud2"></div>
                         <div class="parallax-layer cloud3"></div>
                         <div class="parallax-layer cloud4"></div>
-
-                        <div class="parallax-layer mountain1"></div>
-                        <div class="parallax-layer mountain2"></div>
                         <div class="parallax-layer mountain3"></div>
-                        <div class="parallax-layer mountain4"></div>
-
+                        <div class="parallax-layer mountain2"></div>
+                        <div class="parallax-layer mountain1"></div>
                         <figure class="sp01"></figure>
                     </figure>
                 </div>
@@ -397,11 +461,11 @@
         vhc.addEventListener('change', updateTheme);
         updateTheme(vhc);
 
-        mode.addEventListener('click', function () {
+        mode.addEventListener('click', function() {
             vehicle.classList.toggle('dark');
         });
 
-        bnext.addEventListener('click', function () {
+        bnext.addEventListener('click', function() {
             if (ix < (vehicles.attrs.length - 1)) {
                 car.brand = vehicles.attrs[++ix].brand;
                 car.model = vehicles.attrs[ix].model;
@@ -416,7 +480,7 @@
 
         });
 
-        bprev.addEventListener('click', function () {
+        bprev.addEventListener('click', function() {
             if (ix > 0) {
                 car.brand = vehicles.attrs[--ix].brand;
                 car.model = vehicles.attrs[ix].model;
@@ -492,9 +556,15 @@
                 }
                 tunnel.appendChild(side);
             }
-            const side5 = document.createElement('div'); side5.className = 'side'; tunnel.appendChild(side5);
-            const hl1 = document.createElement('div'); hl1.className = 'side highlight'; tunnel.appendChild(hl1);
-            const hl2 = document.createElement('div'); hl2.className = 'side highlight'; tunnel.appendChild(hl2);
+            const side5 = document.createElement('div');
+            side5.className = 'side';
+            tunnel.appendChild(side5);
+            const hl1 = document.createElement('div');
+            hl1.className = 'side highlight';
+            tunnel.appendChild(hl1);
+            const hl2 = document.createElement('div');
+            hl2.className = 'side highlight';
+            tunnel.appendChild(hl2);
         });
     </script>
 </body>
