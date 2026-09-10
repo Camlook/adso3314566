@@ -98,6 +98,8 @@
                     }
                 }
 
+
+
                 figure.bg {
                     display: flex;
                     margin: 0 auto;
@@ -106,8 +108,8 @@
 
                     figure.sp01 {
                         background: url(imgs/sp01.png) no-repeat center / contain;
-                        width: 150px;
-                        height: 45px;
+                        width: 200px;
+                        height: 80px;
                         display: flex;
                         margin: 0 auto;
                         margin-bottom: 60px;
@@ -115,12 +117,13 @@
                 }
 
                 .vehicle>div {
-                    display: grid;
+                    display: flex;
                     grid-template-columns: 110px 110px 110px;
                     justify-content: center;
                     gap: 10px;
                     margin-top: 20px;
                 }
+
 
                 .parallax-container {
                     background: #05080f;
@@ -129,76 +132,142 @@
 
                 .bgstars {
                     background-image: url('imgs/bgdark/bgstars.png');
-                    z-index: 1;
-                    animation: loopScroll 45s linear infinite;
                     background-size: auto 100%;
-                    background-repeat: repeat-x;
                     background-position: 0 0;
+                    background-repeat: repeat-x;
+                    z-index: 1;
                 }
 
                 .cloud1 {
                     background-image: url('imgs/bgdark/cloud1.png');
-                    z-index: 2;
-                    animation: loopScroll 35s linear infinite;
-                    background-size: auto 100%;
+                    background-size: auto 35%;
+                    background-position-x: 0;
+                    background-position-y: 15%;
                     background-repeat: repeat-x;
-                    background-position: 0 0;
+                    z-index: 2;
                 }
 
                 .cloud2 {
                     background-image: url('imgs/bgdark/cloud2.png');
-                    z-index: 3;
-                    animation: loopScroll 28s linear infinite;
-                    background-size: auto 100%;
+                    background-size: auto 30%;
+                    background-position-x: 0;
+                    background-position-y: 35%;
                     background-repeat: repeat-x;
-                    background-position: 0 0;
+                    z-index: 3;
                 }
 
                 .cloud3 {
                     background-image: url('imgs/bgdark/cloud3.png');
-                    z-index: 4;
-                    animation: loopScroll 22s linear infinite;
-                    background-size: auto 100%;
+                    background-size: auto 40%;
+                    background-position-x: 0;
+                    background-position-y: 55%;
                     background-repeat: repeat-x;
-                    background-position: 0 0;
+                    z-index: 4;
                 }
 
                 .cloud4 {
                     background-image: url('imgs/bgdark/cloud4.png');
-                    z-index: 5;
-                    animation: loopScroll 16s linear infinite;
-                    background-size: auto 100%;
+                    background-size: auto 35%;
+                    background-position-x: 0;
+                    background-position-y: 75%;
                     background-repeat: repeat-x;
-                    background-position: 0 0;
+                    z-index: 5;
                 }
 
                 .mountain3 {
                     background-image: url('imgs/bgdark/mountain3.png');
-                    z-index: 6;
-                    animation: loopScroll 12s linear infinite;
-                    background-size: auto 80%;
+                    background-size: auto 90%;
+                    background-position-x: 0;
+                    background-position-y: bottom;
                     background-repeat: repeat-x;
-                    background-position: 0 bottom;
+                    top: auto;
+                    bottom: -90px;
+                    height: 100%;
+                    z-index: 6;
                 }
 
                 .mountain2 {
                     background-image: url('imgs/bgdark/mountain2.png');
-                    z-index: 7;
-                    animation: loopScroll 8s linear infinite;
                     background-size: auto 85%;
+                    background-position-x: 0;
+                    background-position-y: bottom;
                     background-repeat: repeat-x;
-                    background-position: 0 bottom;
+                    top: auto;
+                    bottom: -90px;
+                    height: 100%;
+                    z-index: 7;
                 }
 
                 .mountain1 {
                     background-image: url('imgs/bgdark/mountain1.png');
-                    z-index: 8;
-                    animation: loopScroll 5s linear infinite;
-                    background-size: auto 90%;
+                    background-size: auto 70%;
+                    background-position-x: 0;
+                    background-position-y: bottom;
                     background-repeat: repeat-x;
-                    background-position: 0 bottom;
+                    top: auto;
+                    bottom: -30px;
+                    height: 100%;
+                    z-index: 8;
+                }
+
+                menu {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0;
+                    margin-top: 25px;
+                    padding: 0;
+                    justify-content: space-between;
+                    width: 356px;
+
+                    button {
+                        height: 68px;
+                        width: 68px;
+                        border: none;
+                        background-color: transparent;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        padding: 0;
+                        cursor: pointer;
+                        outline: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        box-shadow: none;
+                        transition: transform 0.2s ease-in;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        &:active {
+                            transform: scale(0.95);
+                        }
+
+                        &.btn-on {
+                            background-image: url(imgs/btn-on.svg);
+                        }
+
+                        &.btn-off {
+                            background-image: url(imgs/btn-off.svg);
+                        }
+
+                        &.btn-backward {
+                            background-image: url(imgs/btn-back.svg);
+                        }
+
+                        &.btn-stop {
+                            background-image: url(imgs/btn-stop.svg);
+                        }
+
+                        &.btn-forward {
+                            background-image: url(imgs/btn-forward.svg);
+                        }
+                    }
                 }
             }
+
+
 
             &:not(.dark) {
                 .parallax-container {
@@ -249,7 +318,7 @@
 
             border-radius: 8px;
             background-color: rgb(253, 253, 253);
-            height: 600px;
+            height: 627px;
             width: 380px;
             margin: 0 auto;
         }
@@ -344,9 +413,10 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 200%;
+            width: 100%;
             height: 100%;
             background-repeat: repeat-x;
+            will-change: background-position;
         }
 
         figure.sp01 {
@@ -358,21 +428,18 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-        }
-
-        @keyframes loopScroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+            transition: opacity 0.3s ease;
         }
 
         .mountain3,
         .mountain2,
         .mountain1 {
             background-color: transparent;
+        }
+
+        div.vehicle>div.bg-menu-wrapper {
+            flex-direction: column;
+            gap: 0;
         }
     </style>
 </head>
@@ -416,7 +483,8 @@
                     <figure class="refer"></figure>
                     <figure class="color"></figure>
                 </div>
-                <div>
+                <!-- Se añadió la clase bg-menu-wrapper a este div -->
+                <div class="bg-menu-wrapper">
                     <figure class="bg parallax-container">
                         <div class="parallax-layer bgstars"></div>
                         <div class="parallax-layer cloud1"></div>
@@ -428,6 +496,13 @@
                         <div class="parallax-layer mountain1"></div>
                         <figure class="sp01"></figure>
                     </figure>
+                    <menu>
+                        <button class="btn-on"></button>
+                        <button class="btn-forward"></button>
+                        <button class="btn-stop"></button>
+                        <button class="btn-backward"></button>
+                        <button class="btn-off"></button>
+                    </menu>
                 </div>
             </div>
         </section>
@@ -450,7 +525,12 @@
         //Buttons
         const bnext = document.querySelector('.next');
         const bprev = document.querySelector('.prev');
-
+        //---
+        const btnOn = document.querySelector('.btn-on')
+        const btnForw = document.querySelector('.btn-forward')
+        const btnStop = document.querySelector('.btn-stop')
+        const btnBack = document.querySelector('.btn-backward')
+        const btnOff = document.querySelector('.btn-off')
 
         let ix = 0;
 
@@ -461,16 +541,17 @@
         vhc.addEventListener('change', updateTheme);
         updateTheme(vhc);
 
-        mode.addEventListener('click', function() {
+        mode.addEventListener('click', function () {
             vehicle.classList.toggle('dark');
         });
 
-        bnext.addEventListener('click', function() {
+        bnext.addEventListener('click', function () {
             if (ix < (vehicles.attrs.length - 1)) {
                 car.brand = vehicles.attrs[++ix].brand;
                 car.model = vehicles.attrs[ix].model;
                 car.refer = vehicles.attrs[ix].refer;
                 car.color = vehicles.attrs[ix].color;
+                car.image = vehicles.attrs[ix].image;
                 car.displayData();
                 car.enableButton(bprev);
             }
@@ -480,12 +561,13 @@
 
         });
 
-        bprev.addEventListener('click', function() {
+        bprev.addEventListener('click', function () {
             if (ix > 0) {
                 car.brand = vehicles.attrs[--ix].brand;
                 car.model = vehicles.attrs[ix].model;
                 car.refer = vehicles.attrs[ix].refer;
                 car.color = vehicles.attrs[ix].color;
+                car.image = vehicles.attrs[ix].image;
                 car.displayData();
                 car.enableButton(bnext);
             }
@@ -494,16 +576,62 @@
             }
         });
 
+        btnOn.addEventListener('click', function () {
+            car.powerOn();
+        });
+        btnForw.addEventListener('click', function () {
+            car.forward();
+        });
+        btnStop.addEventListener('click', function () {
+            car.stop();
+        });
+        btnBack.addEventListener('click', function () {
+            car.backward();
+        });
+        btnOff.addEventListener('click', function () {
+            car.powerOff();
+        });
+
 
         // Object 
         const vehicles = {
             attrs: [
-                { brand: 'Sp01', refer: 'Space Ship X', model: '2060', color: 'White/Red', image: 'images/sp01.png' },
-                { brand: 'Sp02', refer: 'Spacex Tesla 60', model: '2056', color: 'Black', image: 'images/sp02.png' },
-                { brand: 'Sp03', refer: 'Space Italic X', model: '2069', color: 'Black', image: 'images/sp03.png' },
-                { brand: 'Sp04', refer: 'Spa', model: '2070', color: 'Black', image: 'images/sp04.png' },
+                { brand: 'Sp01', refer: 'Space Ship X', model: '2060', color: 'White/Red', image: 'imgs/sp01.png' },
+                { brand: 'Sp02', refer: 'Spacex Tesla 60', model: '2056', color: 'White/Orange', image: 'imgs/sp02.png' },
+                { brand: 'Sp03', refer: 'Space Italic X', model: '2069', color: 'Black/Blue', image: 'imgs/sp03.png' },
+                { brand: 'Sp04', refer: 'Spa', model: '2070', color: 'White/Blue', image: 'imgs/sp04.png' },
             ]
         };
+
+        // Parallax
+        const layers = document.querySelectorAll('.parallax-layer');
+        let isPaused = true;
+        let isReversed = false;
+        let lastTimestamp = 0;
+        const speedFactors = [0.002, 0.004, 0.006, 0.008, 0.012, 0.02, 0.03, 0.06];
+
+
+        layers.forEach(layer => layer.dataset.pos = '0');
+
+        function animateParallax(timestamp) {
+            if (!isPaused) {
+                const delta = timestamp - (lastTimestamp || timestamp);
+                lastTimestamp = timestamp;
+
+                layers.forEach((layer, index) => {
+                    const speed = speedFactors[index] ?? 0.02;
+                    let currentPos = (parseFloat(layer.dataset.pos) || 0)
+                        + speed * (isReversed ? delta : -delta);
+                    layer.style.backgroundPositionX = `${currentPos}px`;
+                    layer.dataset.pos = currentPos;
+                });
+            } else {
+                lastTimestamp = timestamp;
+            }
+            requestAnimationFrame(animateParallax);
+        }
+
+        requestAnimationFrame(animateParallax);
 
         // Class
         class Vehicle {
@@ -529,8 +657,66 @@
                 lmodel.textContent = this.model;
                 lrefer.textContent = this.refer;
                 lcolor.textContent = this.color;
+
+                const ship = document.querySelector('.sp01');
+                ship.style.opacity = '0';
+                setTimeout(() => {
+                    ship.style.backgroundImage = `url('${this.image}')`;
+                    ship.style.opacity = '1';
+                }, 150);
+            }
+            powerOn() {
+                if (!this.isOn) {
+                    this.isOn = true;
+                    const ship = document.querySelector('.sp01');
+                    const start = Date.now();
+                    const animate = () => {
+                        if (!this.isOn) return;
+                        const t = (Date.now() - start) / 1000; // segundos
+
+                        // Movimiento amplio y rápido
+                        const x = Math.sin(t * 1.8) * 4.5;
+                        const y = Math.sin(t * 2.8) * 6.5 + Math.sin(t * 1.2) * 3;
+
+                        // Rotación marcada, como cabeceo real
+                        const rot = Math.cos(t * 1.8) * 4.5 + Math.sin(t * 0.7) * 2.5;
+
+                        ship.style.transform =
+                            `translateX(-50%) translate(${x}px, ${y}px) rotate(${rot}deg)`;
+
+                        requestAnimationFrame(animate);
+                    };
+                    animate();
+                }
+            }
+
+            powerOff() {
+                if (this.isOn) {
+                    this.isOn = false;
+                    const ship = document.querySelector('.sp01');
+                    ship.style.transition = 'transform 0.5s ease-out';
+                    ship.style.transform = 'translateX(-50%)';
+                    setTimeout(() => ship.style.transition = '', 500);
+                }
+            }
+            forward() {
+                isReversed = false;
+                isPaused = false;
+            }
+
+            backward() {
+                isReversed = true;
+                isPaused = false;
+            }
+
+            stop() {
+                isPaused = true;
             }
         }
+
+
+
+
         car = new Vehicle(vehicles.attrs[ix].brand,
             vehicles.attrs[ix].refer,
             vehicles.attrs[ix].model,
