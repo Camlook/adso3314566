@@ -98,8 +98,6 @@
                     }
                 }
 
-
-
                 figure.bg {
                     display: flex;
                     margin: 0 auto;
@@ -123,7 +121,6 @@
                     gap: 10px;
                     margin-top: 20px;
                 }
-
 
                 .parallax-container {
                     background: #05080f;
@@ -267,53 +264,31 @@
                 }
             }
 
-
-
             &:not(.dark) {
                 .parallax-container {
                     background: #87CEEB;
                     overflow: hidden;
                 }
 
-                .bgstars {
-                    background: transparent;
-                    z-index: 1;
-                }
-
-                .cloud1 {
-                    background: transparent;
-                    z-index: 2;
-                }
-
-                .cloud2 {
-                    background: transparent;
-                    z-index: 3;
-                }
-
-                .cloud3 {
-                    background: transparent;
-                    z-index: 4;
-                }
-
-                .cloud4 {
-                    background: transparent;
-                    z-index: 5;
-                }
-
-                .mountain3 {
-                    background: transparent;
-                    z-index: 6;
-                }
-
-                .mountain2 {
-                    background: transparent;
-                    z-index: 7;
-                }
-
+                .bgstars,
+                .cloud1,
+                .cloud2,
+                .cloud3,
+                .cloud4,
+                .mountain3,
+                .mountain2,
                 .mountain1 {
                     background: transparent;
-                    z-index: 8;
                 }
+
+                .bgstars { z-index: 1; }
+                .cloud1 { z-index: 2; }
+                .cloud2 { z-index: 3; }
+                .cloud3 { z-index: 4; }
+                .cloud4 { z-index: 5; }
+                .mountain3 { z-index: 6; }
+                .mountain2 { z-index: 7; }
+                .mountain1 { z-index: 8; }
             }
 
             border-radius: 8px;
@@ -392,7 +367,6 @@
         figure.color {
             background: url(imgs/color.svg) no-repeat center / contain;
         }
-
 
         div.vehicle>header {
             display: flex;
@@ -483,7 +457,6 @@
                     <figure class="refer"></figure>
                     <figure class="color"></figure>
                 </div>
-                <!-- Se añadió la clase bg-menu-wrapper a este div -->
                 <div class="bg-menu-wrapper">
                     <figure class="bg parallax-container">
                         <div class="parallax-layer bgstars"></div>
@@ -506,134 +479,58 @@
                 </div>
             </div>
         </section>
-
     </main>
+
     <script>
-        //Events
+        // ============================
+        // 1. Tema (claro / oscuro)
+        // ============================
         const vhc = window.matchMedia('(prefers-color-scheme: dark)');
         const vehicle = document.querySelector('.vehicle');
         const mode = document.querySelector('.mode');
 
+        const updateTheme = (e) => vehicle.classList.toggle('dark', e.matches);
 
+        vhc.addEventListener('change', updateTheme);
+        updateTheme(vhc);
 
-        //Labels Attributes
+        mode.addEventListener('click', () => vehicle.classList.toggle('dark'));
+
+        // ============================
+        // 2. Elementos del DOM
+        // ============================
         const lbrand = document.querySelector('.brand');
         const lmodel = document.querySelector('.model');
         const lrefer = document.querySelector('.refer');
         const lcolor = document.querySelector('.color');
 
-        //Buttons
         const bnext = document.querySelector('.next');
         const bprev = document.querySelector('.prev');
-        //---
-        const btnOn = document.querySelector('.btn-on')
-        const btnForw = document.querySelector('.btn-forward')
-        const btnStop = document.querySelector('.btn-stop')
-        const btnBack = document.querySelector('.btn-backward')
-        const btnOff = document.querySelector('.btn-off')
 
-        let ix = 0;
+        const btnOn   = document.querySelector('.btn-on');
+        const btnForw = document.querySelector('.btn-forward');
+        const btnStop = document.querySelector('.btn-stop');
+        const btnBack = document.querySelector('.btn-backward');
+        const btnOff  = document.querySelector('.btn-off');
 
-        const updateTheme = (e) => {
-            vehicle.classList.toggle('dark', e.matches);
-        };
+        const layers = document.querySelectorAll('.parallax-layer');
+        const ship   = document.querySelector('.sp01');
 
-        vhc.addEventListener('change', updateTheme);
-        updateTheme(vhc);
-
-        mode.addEventListener('click', function () {
-            vehicle.classList.toggle('dark');
-        });
-
-        bnext.addEventListener('click', function () {
-            if (ix < (vehicles.attrs.length - 1)) {
-                car.brand = vehicles.attrs[++ix].brand;
-                car.model = vehicles.attrs[ix].model;
-                car.refer = vehicles.attrs[ix].refer;
-                car.color = vehicles.attrs[ix].color;
-                car.image = vehicles.attrs[ix].image;
-                car.displayData();
-                car.enableButton(bprev);
-            }
-            if (ix === vehicles.attrs.length - 1) {
-                car.disableButton(bnext);
-            }
-
-        });
-
-        bprev.addEventListener('click', function () {
-            if (ix > 0) {
-                car.brand = vehicles.attrs[--ix].brand;
-                car.model = vehicles.attrs[ix].model;
-                car.refer = vehicles.attrs[ix].refer;
-                car.color = vehicles.attrs[ix].color;
-                car.image = vehicles.attrs[ix].image;
-                car.displayData();
-                car.enableButton(bnext);
-            }
-            if (ix === 0) {
-                car.disableButton(bprev);
-            }
-        });
-
-        btnOn.addEventListener('click', function () {
-            car.powerOn();
-        });
-        btnForw.addEventListener('click', function () {
-            car.forward();
-        });
-        btnStop.addEventListener('click', function () {
-            car.stop();
-        });
-        btnBack.addEventListener('click', function () {
-            car.backward();
-        });
-        btnOff.addEventListener('click', function () {
-            car.powerOff();
-        });
-
-
-        // Object 
+        // ============================
+        // 3. Datos
+        // ============================
         const vehicles = {
             attrs: [
-                { brand: 'Sp01', refer: 'Space Ship X', model: '2060', color: 'White/Red', image: 'imgs/sp01.png' },
+                { brand: 'Sp01', refer: 'Space Ship X',   model: '2060', color: 'White/Red',    image: 'imgs/sp01.png' },
                 { brand: 'Sp02', refer: 'Spacex Tesla 60', model: '2056', color: 'White/Orange', image: 'imgs/sp02.png' },
-                { brand: 'Sp03', refer: 'Space Italic X', model: '2069', color: 'Black/Blue', image: 'imgs/sp03.png' },
-                { brand: 'Sp04', refer: 'Spa', model: '2070', color: 'White/Blue', image: 'imgs/sp04.png' },
+                { brand: 'Sp03', refer: 'Space Italic X', model: '2069', color: 'Black/Blue',   image: 'imgs/sp03.png' },
+                { brand: 'Sp04', refer: 'Spa',            model: '2070', color: 'White/Blue',   image: 'imgs/sp04.png' },
             ]
         };
 
-        // Parallax
-        const layers = document.querySelectorAll('.parallax-layer');
-        let isPaused = true;
-        let isReversed = false;
-        let lastTimestamp = 0;
-        const speedFactors = [0.002, 0.004, 0.006, 0.008, 0.012, 0.02, 0.03, 0.06];
-
-
-        layers.forEach(layer => layer.dataset.pos = '0');
-
-        function animateParallax(timestamp) {
-            if (!isPaused) {
-                const delta = timestamp - (lastTimestamp || timestamp);
-                lastTimestamp = timestamp;
-
-                layers.forEach((layer, index) => {
-                    const speed = speedFactors[index] ?? 0.02;
-                    let currentPos = (parseFloat(layer.dataset.pos) || 0)
-                        + speed * (isReversed ? delta : -delta);
-                    layer.style.backgroundPositionX = `${currentPos}px`;
-                    layer.dataset.pos = currentPos;
-                });
-            } else {
-                lastTimestamp = timestamp;
-            }
-            requestAnimationFrame(animateParallax);
-        }
-
-        requestAnimationFrame(animateParallax);
-
-        // Class
+        // ============================
+        // 4. Clase Vehicle (mejorada con patrón del instructor)
+        // ============================
         class Vehicle {
             constructor(brand, refer, model, color, image) {
                 this.brand = brand;
@@ -641,9 +538,21 @@
                 this.model = model;
                 this.color = color;
                 this.image = image;
+
+                // Estados de la clase (como en el código del instructor)
+                this.isOn          = false;
+                this.isPaused      = true;
+                this.isReversed    = false;
+                this.lastTimestamp = 0;
+
+                // Velocidades de cada capa del parallax
+                this.speedFactors = [0.002, 0.004, 0.006, 0.008, 0.012, 0.02, 0.03, 0.06];
+
                 this.displayData();
                 this.disableButton(bprev);
             }
+
+            // --- Botones prev/next ---
             disableButton(btn) {
                 btn.style.pointerEvents = 'none';
                 btn.style.opacity = '0.2';
@@ -652,33 +561,33 @@
                 btn.style.pointerEvents = 'auto';
                 btn.style.opacity = '1';
             }
+
+            // --- Mostrar datos ---
             displayData() {
                 lbrand.textContent = this.brand;
                 lmodel.textContent = this.model;
                 lrefer.textContent = this.refer;
                 lcolor.textContent = this.color;
 
-                const ship = document.querySelector('.sp01');
                 ship.style.opacity = '0';
                 setTimeout(() => {
                     ship.style.backgroundImage = `url('${this.image}')`;
                     ship.style.opacity = '1';
                 }, 150);
             }
+
+            // --- Encendido / apagado ---
             powerOn() {
                 if (!this.isOn) {
                     this.isOn = true;
-                    const ship = document.querySelector('.sp01');
                     const start = Date.now();
+
                     const animate = () => {
                         if (!this.isOn) return;
-                        const t = (Date.now() - start) / 1000; // segundos
+                        const t = (Date.now() - start) / 1000;
 
-                        // Movimiento amplio y rápido
-                        const x = Math.sin(t * 1.8) * 4.5;
-                        const y = Math.sin(t * 2.8) * 6.5 + Math.sin(t * 1.2) * 3;
-
-                        // Rotación marcada, como cabeceo real
+                        const x   = Math.sin(t * 1.8) * 4.5;
+                        const y   = Math.sin(t * 2.8) * 6.5 + Math.sin(t * 1.2) * 3;
                         const rot = Math.cos(t * 1.8) * 4.5 + Math.sin(t * 0.7) * 2.5;
 
                         ship.style.transform =
@@ -686,45 +595,123 @@
 
                         requestAnimationFrame(animate);
                     };
-                    animate();
+                    requestAnimationFrame(animate);
                 }
             }
 
             powerOff() {
                 if (this.isOn) {
                     this.isOn = false;
-                    const ship = document.querySelector('.sp01');
                     ship.style.transition = 'transform 0.5s ease-out';
                     ship.style.transform = 'translateX(-50%)';
                     setTimeout(() => ship.style.transition = '', 500);
                 }
             }
+
+            // --- Movimiento (parallax) ---
             forward() {
-                isReversed = false;
-                isPaused = false;
+                if (this.isOn && this.isPaused) {
+                    this.lastTimestamp = 0;
+                    this.isPaused      = false;
+                    this.isReversed    = false;
+                    requestAnimationFrame((t) => this.animateParallax(t));
+                }
             }
 
             backward() {
-                isReversed = true;
-                isPaused = false;
+                if (this.isOn && this.isPaused) {
+                    this.lastTimestamp = 0;
+                    this.isPaused      = false;
+                    this.isReversed    = true;
+                    requestAnimationFrame((t) => this.animateParallax(t));
+                }
             }
 
             stop() {
-                isPaused = true;
+                if (this.isOn && !this.isPaused) {
+                    this.lastTimestamp = 0;
+                    this.isPaused = true;
+                }
+            }
+
+            // --- Animación del parallax (dentro de la clase) ---
+            animateParallax(timestamp) {
+                if (!this.isPaused) {
+                    const delta = timestamp - (this.lastTimestamp || timestamp);
+                    this.lastTimestamp = timestamp;
+
+                    layers.forEach((layer, index) => {
+                        const speed = this.speedFactors[index] ?? 0.02;
+                        let currentPos = (parseFloat(layer.dataset.pos) || 0)
+                            + speed * (this.isReversed ? delta : -delta);
+                        layer.style.backgroundPositionX = `${currentPos}px`;
+                        layer.dataset.pos = currentPos;
+                    });
+
+                    requestAnimationFrame((t) => this.animateParallax(t));
+                } else {
+                    this.lastTimestamp = 0;
+                }
             }
         }
 
+        // ============================
+        // 5. Instancia y eventos
+        // ============================
+        let ix = 0;
 
-
-
-        car = new Vehicle(vehicles.attrs[ix].brand,
+        const car = new Vehicle(
+            vehicles.attrs[ix].brand,
             vehicles.attrs[ix].refer,
             vehicles.attrs[ix].model,
             vehicles.attrs[ix].color,
-            vehicles.attrs[ix].image,
+            vehicles.attrs[ix].image
         );
+
+        // Inicializar posiciones del parallax
+        layers.forEach(layer => layer.dataset.pos = '0');
+
+        // --- Navegación ---
+        bnext.addEventListener('click', () => {
+            if (ix < vehicles.attrs.length - 1) {
+                ix++;
+                car.brand = vehicles.attrs[ix].brand;
+                car.model = vehicles.attrs[ix].model;
+                car.refer = vehicles.attrs[ix].refer;
+                car.color = vehicles.attrs[ix].color;
+                car.image = vehicles.attrs[ix].image;
+                car.displayData();
+                car.enableButton(bprev);
+                if (ix === vehicles.attrs.length - 1) car.disableButton(bnext);
+            }
+        });
+
+        bprev.addEventListener('click', () => {
+            if (ix > 0) {
+                ix--;
+                car.brand = vehicles.attrs[ix].brand;
+                car.model = vehicles.attrs[ix].model;
+                car.refer = vehicles.attrs[ix].refer;
+                car.color = vehicles.attrs[ix].color;
+                car.image = vehicles.attrs[ix].image;
+                car.displayData();
+                car.enableButton(bnext);
+                if (ix === 0) car.disableButton(bprev);
+            }
+        });
+
+        // --- Botones de control ---
+        btnOn.addEventListener('click',   () => car.powerOn());
+        btnForw.addEventListener('click', () => car.forward());
+        btnStop.addEventListener('click', () => car.stop());
+        btnBack.addEventListener('click', () => car.backward());
+        btnOff.addEventListener('click',  () => car.powerOff());
     </script>
+
     <script>
+        // ============================
+        // 6. Túnel decorativo (tu código original)
+        // ============================
         document.addEventListener("DOMContentLoaded", () => {
             const tunnel = document.querySelector('.tunnel');
             for (let s = 0; s < 4; s++) {
