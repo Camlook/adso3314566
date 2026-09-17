@@ -152,9 +152,9 @@
                 position: absolute;
                 z-index: 10;
                 background: url('imgs/sp01.png') no-repeat center / contain;
-                width: 150px;
-                height: 60px;
-                bottom: 60px;
+                width: 170px;
+                height: 68px;
+                bottom: 80px;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
@@ -591,7 +591,7 @@
             }
 
             powerOff() {
-                if (this.isOn) {
+                if (this.isOn && this.isPaused) {
                     this.isOn = false;
                     ship.style.transition = 'transform 0.5s ease-out';
                     ship.style.transform = 'translate(0, 0)';
